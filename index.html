@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Nguyen Minh Hieu — Computer Science student at PTIT, AI/ML enthusiast specializing in rPPG, RAG, and real-time systems.">
+    <meta name="keywords" content="Nguyen Minh Hieu, portfolio, AI, machine learning, computer science, PTIT, rPPG, RAG">
+    <meta name="author" content="Nguyen Minh Hieu">
+    <title>Nguyen Minh Hieu — Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>MH<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-name">
+                <span class="hero-greeting">Hi, I'm</span>
+                <span class="hero-title">Nguyen Minh<br><span class="gradient-text">Hieu</span></span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="typewriter" id="typewriter"></span><span class="typewriter-cursor">|</span>
+            </p>
+            <p class="hero-description">
+                Computer Science student at PTIT passionate about building intelligent systems — 
+                from real-time health monitoring with rPPG to RAG-powered chatbots.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="3.41">0</span>
+                    <span class="stat-label">GPA / 4.0</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="720">0</span>
+                    <span class="stat-label">TOEIC Score</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="1">0</span>
+                    <span class="stat-label">Major Project</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-code-block">
+                <div class="code-header">
+                    <span class="code-dot red"></span>
+                    <span class="code-dot yellow"></span>
+                    <span class="code-dot green"></span>
+                    <span class="code-filename">about_me.py</span>
+                </div>
+                <pre class="code-content"><code><span class="code-keyword">class</span> <span class="code-class">Developer</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(<span class="code-param">self</span>):
+        self.<span class="code-attr">name</span> = <span class="code-string">"Nguyen Minh Hieu"</span>
+        self.<span class="code-attr">role</span> = <span class="code-string">"AI/ML Engineer"</span>
+        self.<span class="code-attr">languages</span> = [<span class="code-string">"Python"</span>, <span class="code-string">"C/C++"</span>]
+        self.<span class="code-attr">interests</span> = [
+            <span class="code-string">"Computer Vision"</span>,
+            <span class="code-string">"NLP & RAG"</span>,
+            <span class="code-string">"Health Tech"</span>
+        ]
+
+    <span class="code-keyword">def</span> <span class="code-func">say_hi</span>(<span class="code-param">self</span>):
+        <span class="code-keyword">print</span>(<span class="code-string">"Welcome to my portfolio!"</span>)
+
+<span class="code-comment"># Let's connect! 🚀</span>
+me = <span class="code-class">Developer</span>()
+me.<span class="code-func">say_hi</span>()</code></pre>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-user"></i> Introduction</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm a <strong>Computer Science</strong> student at the Posts and Telecommunications Institute of Technology (PTIT) 
+                        in Ha Noi, Viet Nam. My passion lies at the intersection of <strong>Artificial Intelligence</strong>, 
+                        <strong>Machine Learning</strong>, and real-world applications.
+                    </p>
+                    <p>
+                        As a member of the <strong>PTIT AI Young Talent Club</strong>, I conduct research on contactless health monitoring 
+                        technologies (rPPG) and explore cutting-edge LLM training methodologies including RLHF pipelines and efficient fine-tuning.
+                    </p>
+                    <p>
+                        I love building end-to-end systems that combine deep learning models with robust backend infrastructure — 
+                        from real-time video processing pipelines to RAG-powered chatbots.
+                    </p>
+                    <div class="about-info-cards">
+                        <div class="info-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Ha Noi, Viet Nam</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <span class="info-label">University</span>
+                                <span class="info-value">PTIT (2023 - 2027)</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-brain"></i>
+                            <div>
+                                <span class="info-label">Focus</span>
+                                <span class="info-value">AI / Machine Learning</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <span class="info-label">English</span>
+                                <span class="info-value">TOEIC 720</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="tech-orbit">
+                        <div class="orbit-center">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="orbit-ring ring-1">
+                            <div class="orbit-item" style="--angle: 0deg;" data-tooltip="Python">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="orbit-item" style="--angle: 120deg;" data-tooltip="Docker">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <div class="orbit-item" style="--angle: 240deg;" data-tooltip="Git">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                        </div>
+                        <div class="orbit-ring ring-2">
+                            <div class="orbit-item" style="--angle: 60deg;" data-tooltip="AI/ML">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="orbit-item" style="--angle: 180deg;" data-tooltip="Database">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="orbit-item" style="--angle: 300deg;" data-tooltip="API">
+                                <i class="fas fa-server"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section section-alt" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-graduation-cap"></i> Academic Background</span>
+                <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Posts and Telecommunications Institute of Technology</h3>
+                            <span class="timeline-date">
+                                <i class="far fa-calendar-alt"></i> 2023 — 2027
+                            </span>
+                        </div>
+                        <p class="timeline-degree">Bachelor of Computer Science</p>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Ha Dong, Ha Noi</p>
+                        <div class="gpa-badge">
+                            <div class="gpa-circle">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="42" class="gpa-bg"/>
+                                    <circle cx="50" cy="50" r="42" class="gpa-fill" style="--gpa-percent: 85;"/>
+                                </svg>
+                                <span class="gpa-value">3.41</span>
+                            </div>
+                            <span class="gpa-label">GPA / 4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-rocket"></i> What I've Built</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            </div>
+
+            <div class="project-showcase">
+                <!-- Project Hero Card -->
+                <div class="project-card featured">
+                    <div class="project-card-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mhiu05/Non-Invasive" target="_blank" rel="noopener" class="project-link" aria-label="GitHub repository">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://non-invasive.vercel.app/" target="_blank" rel="noopener" class="project-link" aria-label="Live demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Non-Invasive Health Analysis System</h3>
+                    <p class="project-date"><i class="far fa-calendar-alt"></i> Nov. 2025 — Present</p>
+                    <p class="project-description">
+                        A full-stack biometric measurement platform that extracts heart rate, HRV, blink rate, and BVP signals 
+                        from facial videos — featuring real-time webcam analysis via WebSocket, offline video processing 
+                        with an async job queue, and an AI medical chatbot powered by Advanced RAG.
+                    </p>
+
+                    <!-- Demo Screenshot -->
+                    <div class="project-demo-image">
+                        <img src="figures/project_demo.png" alt="Non-Invasive Health Analysis System — Live measurement interface" loading="lazy">
+                        <div class="demo-caption">
+                            <i class="fas fa-camera"></i> Live analysis interface — real-time HR, Blink Rate, SNR & BVP waveform
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Architecture Diagram -->
+                <div class="project-card">
+                    <h3 class="project-card-subtitle"><i class="fas fa-sitemap"></i> System Architecture</h3>
+                    <p class="project-card-desc">Designed with 4 main layers: Computer Vision & rPPG, Signal Processing, AI/NLP (RAG Chatbot), and Web Fullstack — connected through WebSocket, REST API, and a Celery + Redis distributed job queue.</p>
+                    <div class="project-architecture-image">
+                        <img src="figures/project_architecture.png" alt="Non-Invasive Health Analysis Architecture Diagram" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Detailed Feature Tabs -->
+                <div class="project-card">
+                    <h3 class="project-card-subtitle"><i class="fas fa-layer-group"></i> Deep Dive — Key Components</h3>
+
+                    <div class="feature-tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-tab="tab-rppg"><i class="fas fa-wave-square"></i><span>rPPG Engine</span></button>
+                            <button class="tab-btn" data-tab="tab-realtime"><i class="fas fa-broadcast-tower"></i><span>Real-time</span></button>
+                            <button class="tab-btn" data-tab="tab-async"><i class="fas fa-cogs"></i><span>Async Jobs</span></button>
+                            <button class="tab-btn" data-tab="tab-rag"><i class="fas fa-robot"></i><span>RAG Chatbot</span></button>
+                            <button class="tab-btn" data-tab="tab-frontend"><i class="fab fa-react"></i><span>Frontend</span></button>
+                        </div>
+
+                        <div class="tab-panels">
+                            <!-- rPPG Engine -->
+                            <div class="tab-panel active" id="tab-rppg">
+                                <div class="tab-panel-header">
+                                    <h4>rPPG Engine & Signal Processing</h4>
+                                    <span class="tab-badge">Computer Vision</span>
+                                </div>
+                                <ul class="detail-list">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Deployed <strong>FactorizePhys</strong> (3D-CNN + NMF-based FSAM) via <strong>ONNX Runtime</strong> — lightweight inference without PyTorch dependency, supporting optional CUDA acceleration.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span><strong>MediaPipe Face Mesh</strong> for real-time face detection, bounding box expansion, and crop resizing to model-compatible input.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Chunk-wise processing pipeline: <strong>SessionState</strong> maintains a 180-frame rolling buffer per session for continuous BVP extraction.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Signal processing: <strong>detrend → Butterworth bandpass → FFT peak detection</strong> for heart rate. Age-adaptive bandpass ranges via <code>get_bandpass_by_age()</code>.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Extracts comprehensive HRV metrics: <strong>RMSSD, SDNN, PNN50</strong>, plus SNR quality assessment.</span>
+                                    </li>
+                                </ul>
+                                <div class="tab-metrics">
+                                    <div class="metric-item">
+                                        <span class="metric-value">0.04</span>
+                                        <span class="metric-label">MAE (bpm) — Sitting still</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-value">0.83</span>
+                                        <span class="metric-label">MAE (bpm) — Head motion</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-value">1.67</span>
+                                        <span class="metric-label">MAE (bpm) — Talking</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-value"><2</span>
+                                        <span class="metric-label">bpm error — All conditions</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Real-time WebSocket -->
+                            <div class="tab-panel" id="tab-realtime">
+                                <div class="tab-panel-header">
+                                    <h4>Real-time WebSocket Streaming</h4>
+                                    <span class="tab-badge">Live Analysis</span>
+                                </div>
+                                <ul class="detail-list">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span><strong>WebSocket endpoint</strong> (<code>ws://host/ws/stream</code>) accepts live webcam frames from the browser, returning face bounding box and vitals in real-time.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Protocol: Client sends <code>{"type":"frame","data":"..."}</code> (base64 JPEG). Server responds with <code>face</code> / <code>vitals</code> / <code>error</code> messages.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Each connection maintains an isolated <strong>SessionState</strong> with its own rPPG buffer — supports concurrent multi-user sessions.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Auto-saves measurement records to <strong>PostgreSQL</strong> when a session exceeds 5 seconds, enabling full history tracking.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Frontend hooks (<code>useWebSocket.js</code> + <code>useWebcam.js</code>) handle camera capture, frame encoding, and reconnection logic.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Async Pipeline -->
+                            <div class="tab-panel" id="tab-async">
+                                <div class="tab-panel-header">
+                                    <h4>Async Video Processing Pipeline</h4>
+                                    <span class="tab-badge">Background Jobs</span>
+                                </div>
+                                <ul class="detail-list">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span><code>POST /video/upload-async</code> receives video upload → stores in <strong>S3 Object Storage (Supabase)</strong> → creates job record in PostgreSQL → dispatches task to <strong>Celery + Redis</strong> queue.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span><strong>Celery Worker</strong> (separate Docker container) downloads from S3 → runs face detection → rPPG inference → signal processing → saves results → deletes S3 file.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Job status tracking via <code>GET /video/jobs/{job_id}</code> — Frontend polls every 2 seconds until completion.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Full history persistence in <strong>PostgreSQL</strong> with metadata: HR, HRV (RMSSD/SDNN/PNN50), SNR, age, bandpass params, duration, and timestamps.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Dockerized 4-service architecture: <strong>Backend</strong>, <strong>Worker</strong>, <strong>Redis</strong>, <strong>Frontend</strong> — orchestrated via Docker Compose.</span>
+                                    </li>
+                                </ul>
+                                <div class="flow-diagram">
+                                    <div class="flow-step"><i class="fas fa-upload"></i><span>Upload</span></div>
+                                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="flow-step"><i class="fas fa-cloud"></i><span>S3</span></div>
+                                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="flow-step"><i class="fas fa-tasks"></i><span>Celery</span></div>
+                                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="flow-step"><i class="fas fa-brain"></i><span>rPPG</span></div>
+                                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="flow-step"><i class="fas fa-database"></i><span>DB</span></div>
+                                </div>
+                            </div>
+
+                            <!-- RAG Chatbot -->
+                            <div class="tab-panel" id="tab-rag">
+                                <div class="tab-panel-header">
+                                    <h4>Medical Chatbot — Advanced RAG</h4>
+                                    <span class="tab-badge">NLP / LLM</span>
+                                </div>
+                                <ul class="detail-list">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Advanced RAG pipeline: <strong>Query Rewriting</strong> (LLM-based) → <strong>Hybrid Search</strong> (FAISS dense + BM25 sparse) → <strong>Cross-Encoder Re-ranking</strong> → <strong>Google Gemini</strong> response generation.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Knowledge base ingestion from <code>Medical_book.pdf</code> using document loader — supports PDF, Markdown, and plain text formats.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>FAISS vectorstore with dense embeddings for semantic search, combined with BM25 for keyword-level matching — <strong>hybrid retrieval</strong> for best accuracy.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Lazy-loaded RAG chain — model initializes on first request, keeping cold-start fast and memory efficient.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>User feedback collection module (<code>feedback_store.py</code>) stores chatbot quality ratings in Supabase for continuous improvement.</span>
+                                    </li>
+                                </ul>
+                                <div class="flow-diagram">
+                                    <div class="flow-step"><i class="fas fa-question-circle"></i><span>Query</span></div>
+                                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="flow-step"><i class="fas fa-pen"></i><span>Rewrite</span></div>
+                                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="flow-step"><i class="fas fa-search"></i><span>Hybrid Search</span></div>
+                                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="flow-step"><i class="fas fa-sort-amount-down"></i><span>Re-rank</span></div>
+                                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="flow-step"><i class="fas fa-magic"></i><span>Gemini</span></div>
+                                </div>
+                            </div>
+
+                            <!-- Frontend -->
+                            <div class="tab-panel" id="tab-frontend">
+                                <div class="tab-panel-header">
+                                    <h4>Frontend — React + Vite</h4>
+                                    <span class="tab-badge">Web UI</span>
+                                </div>
+                                <ul class="detail-list">
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span><strong>3 main pages</strong>: Home (landing with feature guide), Live (real-time webcam + WebSocket vitals), Upload (async video processing + history).</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Live page: webcam feed with <strong>face bounding box overlay</strong>, real-time VitalSignCards (HR, SNR, HRV), and interactive <strong>BVP waveform chart</strong>.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Upload page: async file upload with job polling, <strong>BVP signal CSV export</strong>, age-based bandpass configuration, and inline history viewer.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Floating <strong>AI chatbot widget</strong> accessible from every page — sends queries to backend RAG and displays sourced responses.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>State management via <strong>Zustand</strong>, custom hooks for WebSocket/Webcam, and CSS Modules for component-scoped styling.</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span><strong>Supabase Auth</strong> integration — user login/register to persist and track personal health measurement history over time.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benchmark Results -->
+                <div class="project-card">
+                    <h3 class="project-card-subtitle"><i class="fas fa-chart-bar"></i> Benchmark Results</h3>
+                    <p class="project-card-desc">Evaluated on 10 users under 3 practical conditions. The system achieves high accuracy (error &lt; 2 bpm) even in noisy environments.</p>
+                    <div class="benchmark-image">
+                        <img src="figures/benchmark_normal.png" alt="Benchmark results — Normal sitting condition" loading="lazy">
+                        <div class="demo-caption"><i class="fas fa-flask"></i> HR measurement benchmark — Normal (sitting still), optimal model: FactorizePhys</div>
+                    </div>
+                </div>
+
+                <!-- Tech Stack Grid -->
+                <div class="project-card">
+                    <h3 class="project-card-subtitle"><i class="fas fa-cubes"></i> Technology Stack</h3>
+                    <div class="project-tech-grid">
+                        <div class="tech-group">
+                            <span class="tech-group-label">AI / CV</span>
+                            <div class="tech-group-items">
+                                <span class="tech-tag">ONNX Runtime</span>
+                                <span class="tech-tag">MediaPipe</span>
+                                <span class="tech-tag">FactorizePhys</span>
+                                <span class="tech-tag">FFT</span>
+                                <span class="tech-tag">Butterworth Filter</span>
+                            </div>
+                        </div>
+                        <div class="tech-group">
+                            <span class="tech-group-label">RAG / NLP</span>
+                            <div class="tech-group-items">
+                                <span class="tech-tag">Google Gemini</span>
+                                <span class="tech-tag">FAISS</span>
+                                <span class="tech-tag">BM25</span>
+                                <span class="tech-tag">Cross-Encoder</span>
+                                <span class="tech-tag">LangChain</span>
+                            </div>
+                        </div>
+                        <div class="tech-group">
+                            <span class="tech-group-label">Backend</span>
+                            <div class="tech-group-items">
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">WebSocket</span>
+                                <span class="tech-tag">Celery</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">Pydantic</span>
+                            </div>
+                        </div>
+                        <div class="tech-group">
+                            <span class="tech-group-label">Frontend</span>
+                            <div class="tech-group-items">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Vite</span>
+                                <span class="tech-tag">Zustand</span>
+                                <span class="tech-tag">CSS Modules</span>
+                            </div>
+                        </div>
+                        <div class="tech-group">
+                            <span class="tech-group-label">Cloud / Infra</span>
+                            <div class="tech-group-items">
+                                <span class="tech-tag">Supabase</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">S3 Storage</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Vercel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-tools"></i> Tech Stack</span>
+                <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-copyright"></i>
+                            <span>C / C++</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <h3>AI / ML</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-fire"></i>
+                            <span>PyTorch</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-robot"></i>
+                            <span>Transformers</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-link"></i>
+                            <span>LangChain</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-search"></i>
+                            <span>RAG</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-eye"></i>
+                            <span>OpenCV</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Scikit-learn</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-server"></i></div>
+                        <h3>Backend & Infra</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-wrench"></i></div>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-google"></i>
+                            <span>Google Colab</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-kaggle"></i>
+                            <span>Kaggle</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-smile"></i>
+                            <span>Hugging Face</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="section" id="activities">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-users"></i> Extracurricular</span>
+                <h2 class="section-title">Activities & <span class="gradient-text">Research</span></h2>
+            </div>
+            <div class="activity-card">
+                <div class="activity-icon-wrapper">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <div class="activity-content">
+                    <h3>PTIT AI Young Talent Club</h3>
+                    <span class="activity-role">Member — AI Research Division</span>
+                    <ul class="activity-list">
+                        <li>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Conducting university-level research on contactless health monitoring (rPPG) technologies.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Studied and reviewed LLM training methodologies including RLHF pipelines (PPO, DPO) and efficient fine-tuning with Qwen model family.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="section section-alt" id="certificates">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-award"></i> Achievements</span>
+                <h2 class="section-title">Certificates & <span class="gradient-text">Awards</span></h2>
+            </div>
+            <div class="certificates-grid">
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="figures/toeic.jpg" alt="TOEIC Certificate" loading="lazy">
+                        <div class="cert-overlay">
+                            <a href="figures/toeic.jpg" target="_blank" class="cert-view-btn"><i class="fas fa-search-plus"></i> View</a>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <div class="cert-icon-header">
+                            <div class="cert-icon"><i class="fas fa-language"></i></div>
+                            <span class="cert-date">Apr. 2026</span>
+                        </div>
+                        <div class="cert-content">
+                            <h3>TOEIC Listening & Reading: 720</h3>
+                            <span class="cert-issuer">ETS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="figures/DeepLearning-NVIDIA.jpg" alt="Deep Learning Certificate" loading="lazy">
+                        <div class="cert-overlay">
+                            <a href="figures/DeepLearning-NVIDIA.jpg" target="_blank" class="cert-view-btn"><i class="fas fa-search-plus"></i> View</a>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <div class="cert-icon-header">
+                            <div class="cert-icon"><i class="fas fa-microchip"></i></div>
+                            <span class="cert-date">Aug. 2025</span>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Fundamentals of Deep Learning</h3>
+                            <span class="cert-issuer">NVIDIA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="figures/AI_ML_Fundamentals.png" alt="AI/ML Fundamentals Certificate" loading="lazy">
+                        <div class="cert-overlay">
+                            <a href="figures/AI_ML_Fundamentals.png" target="_blank" class="cert-view-btn"><i class="fas fa-search-plus"></i> View</a>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <div class="cert-icon-header">
+                            <div class="cert-icon"><i class="fas fa-brain"></i></div>
+                            <span class="cert-date">Apr. 2025</span>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Fundamentals of AI/ML and IoT</h3>
+                            <span class="cert-issuer">PTIT × LTU</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-image">
+                        <img src="figures/math.jpg" alt="Math Olympiad Certificate" loading="lazy">
+                        <div class="cert-overlay">
+                            <a href="figures/math.jpg" target="_blank" class="cert-view-btn"><i class="fas fa-search-plus"></i> View</a>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <div class="cert-icon-header">
+                            <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+                            <span class="cert-date">Apr. 2025</span>
+                        </div>
+                        <div class="cert-content">
+                            <h3>National Mathematics Olympiad for Students</h3>
+                            <span class="cert-issuer">Vietnam Mathematical Society</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-paper-plane"></i> Let's Connect</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-description">
+                    I'm always open to new opportunities, collaborations, and interesting conversations. 
+                    Feel free to reach out!
+                </p>
+            </div>
+            <div class="contact-grid">
+                <a href="mailto:minhhieuhh2k5@gmail.com" class="contact-card" id="contact-email">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>minhhieuhh2k5@gmail.com</p>
+                </a>
+                <a href="tel:+84375049906" class="contact-card" id="contact-phone">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Phone</h3>
+                    <p>0375 049 906</p>
+                </a>
+                <a href="https://github.com/mhiu05" target="_blank" rel="noopener" class="contact-card" id="contact-github">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <h3>GitHub</h3>
+                    <p>github.com/mhiu05</p>
+                </a>
+                <div class="contact-card" id="contact-location">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Location</h3>
+                    <p>Ha Noi, Viet Nam</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>MH<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text">Designed & Built by Nguyen Minh Hieu</p>
+                <div class="footer-social">
+                    <a href="https://github.com/mhiu05" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:minhhieuhh2k5@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="footer-copyright">&copy; 2025 Nguyen Minh Hieu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
