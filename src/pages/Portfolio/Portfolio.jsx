@@ -438,13 +438,13 @@ export default function Portfolio() {
                         </div>
                         <div className="certificates-grid">
                             {[
-                                { img: '/figures/portfolio_toeic.jpg', icon: 'fas fa-language', date: 'Apr. 2026', title: 'TOEIC Listening & Reading: 720', issuer: 'ETS' },
-                                { img: '/figures/portfolio_DeepLearning-NVIDIA.jpg', icon: 'fas fa-microchip', date: 'Aug. 2025', title: 'Fundamentals of Deep Learning', issuer: 'NVIDIA' },
-                                { img: '/figures/portfolio_AI_ML_Fundamentals.png', icon: 'fas fa-brain', date: 'Apr. 2025', title: 'AI/ML Fundamentals', issuer: 'PTIT x LA TROBE UNIVERSITY' },
-                                { img: '/figures/portfolio_math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội toán học Việt Nam' },
-                                // { img: '/figures/portfolio_math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội toán học Việt Nam' },
-                                // { img: '/figures/portfolio_math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội toán học Việt Nam' },
-                                // { img: '/figures/portfolio_math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội toán học Việt Nam' },
+                                { img: '/figures/toeic.jpg', icon: 'fas fa-language', date: 'Apr. 2026', title: 'TOEIC Listening & Reading: 720', issuer: 'ETS' },
+                                { img: '/figures/DeepLearning-NVIDIA.jpg', icon: 'fas fa-microchip', date: 'Aug. 2025', title: 'Fundamentals of Deep Learning', issuer: 'NVIDIA' },
+                                { img: '/figures/AI_ML_Fundamentals.png', icon: 'fas fa-brain', date: 'Apr. 2025', title: 'AI/ML Fundamentals', issuer: 'PTIT x LA TROBE UNIVERSITY' },
+                                { img: '/figures/math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội Toán học Việt Nam' },
+                                { img: '/figures/Applications of Algorithm.jpg', icon: 'fas fa-calculator', date: 'Aug. 2025', title: 'Application of Algorithm', issuer: 'SAMSUNG x PTIT' },
+                                { img: '/figures/chemistry.jpg', icon: 'fas fa-calculator', date: 'Mar. 2025', title: 'Giải Ba HSG cấp tỉnh môn Hóa học', issuer: 'Sở GD&ĐT Bắc Ninh' },
+                                { img: '/figures/khochockythuat.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Giải Tư Khoa học Kỹ thuật cấp tỉnh', issuer: 'Sở GD&ĐT Bắc Ninh' },
                             ].map((cert) => (
                                 <div className="cert-card" key={cert.title}>
                                     <div className="cert-image">
