@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -27,32 +26,31 @@ export default function Navbar() {
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
             <div className="nav-container">
-                <NavLink to="/" className="nav-logo" onClick={closeMenu}>
+                <a href="#about" className="nav-logo" onClick={closeMenu}>
                     mhiu05
-                </NavLink>
+                </a>
                 <div className={`nav-links ${menuOpen ? 'active' : ''}`} id="navLinks">
-                    <NavLink
-                        to="/"
-                        className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-                        onClick={closeMenu}
-                        end
-                    >
-                        Trang chủ
-                    </NavLink>
-                    <NavLink
-                        to="/blogs"
-                        className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                    <a
+                        href="#about"
+                        className="nav-link"
                         onClick={closeMenu}
                     >
-                        Blogs
-                    </NavLink>
-                    <NavLink
-                        to="/portfolio"
-                        className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                        Giới thiệu
+                    </a>
+                    <a
+                        href="#projects"
+                        className="nav-link"
                         onClick={closeMenu}
                     >
-                        Portfolio
-                    </NavLink>
+                        Dự án
+                    </a>
+                    <a
+                        href="#contact"
+                        className="nav-link"
+                        onClick={closeMenu}
+                    >
+                        Liên hệ
+                    </a>
                 </div>
                 <button
                     className={`nav-toggle ${menuOpen ? 'active' : ''}`}
