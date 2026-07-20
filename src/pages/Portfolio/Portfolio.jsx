@@ -82,6 +82,27 @@ export default function Portfolio() {
                                 </p>
 
                                 <div className="about-info-cards">
+                                    <a href="mailto:minhhieuhh2k5@gmail.com" className="info-card">
+                                        <i className="fas fa-envelope"></i>
+                                        <div>
+                                            <span className="info-label">Email</span>
+                                            <span className="info-value">minhhieuhh2k5@gmail.com</span>
+                                        </div>
+                                    </a>
+                                    <a href="tel:+84375049906" className="info-card">
+                                        <i className="fas fa-phone-alt"></i>
+                                        <div>
+                                            <span className="info-label">Điện thoại</span>
+                                            <span className="info-value">0375 049 906</span>
+                                        </div>
+                                    </a>
+                                    <a href="https://github.com/mhiu05" target="_blank" rel="noopener noreferrer" className="info-card">
+                                        <i className="fab fa-github"></i>
+                                        <div>
+                                            <span className="info-label">GitHub</span>
+                                            <span className="info-value">github.com/mhiu05</span>
+                                        </div>
+                                    </a>
                                     <div className="info-card">
                                         <i className="fas fa-map-marker-alt"></i>
                                         <div>
@@ -89,29 +110,9 @@ export default function Portfolio() {
                                             <span className="info-value">Hà Nội, Việt Nam</span>
                                         </div>
                                     </div>
-                                    <div className="info-card">
-                                        <i className="fas fa-graduation-cap"></i>
-                                        <div>
-                                            <span className="info-label">Trường đại học</span>
-                                            <span className="info-value">PTIT (2023 - 2027)</span>
-                                        </div>
-                                    </div>
-                                    <div className="info-card">
-                                        <i className="fas fa-brain"></i>
-                                        <div>
-                                            <span className="info-label">Focus</span>
-                                            <span className="info-value">AI Research/Engineer</span>
-                                        </div>
-                                    </div>
-                                    <div className="info-card">
-                                        <i className="fas fa-language"></i>
-                                        <div>
-                                            <span className="info-label">English</span>
-                                            <span className="info-value">TOEIC 720</span>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
+
                             <div className="about-visual">
                                 <div className="tech-orbit">
                                     <div className="orbit-center">
@@ -467,41 +468,6 @@ export default function Portfolio() {
                                     </div>
                                 </div>
                             ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* Contact Section */}
-                <section className="section" id="contact">
-                    <div className="container">
-                        <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-paper-plane"></i> Hãy kết nối</span>
-                            <h2 className="section-title">Liên hệ với <span className="gradient-text">tôi</span></h2>
-                            <p className="section-description">
-                                Tôi luôn sẵn lòng chào đón những cơ hội mới, cộng tác, và các cuộc trò chuyện thú vị. Vui lòng liên hệ với tôi!
-                            </p>
-                        </div>
-                        <div className="contact-grid">
-                            <a href="mailto:minhhieuhh2k5@gmail.com" className="contact-card" id="contact-email">
-                                <div className="contact-icon"><i className="fas fa-envelope"></i></div>
-                                <h3>Email</h3>
-                                <p>minhhieuhh2k5@gmail.com</p>
-                            </a>
-                            <a href="tel:+84375049906" className="contact-card" id="contact-phone">
-                                <div className="contact-icon"><i className="fas fa-phone-alt"></i></div>
-                                <h3>Điện thoại</h3>
-                                <p>0375 049 906</p>
-                            </a>
-                            <a href="https://github.com/mhiu05" target="_blank" rel="noopener noreferrer" className="contact-card" id="contact-github">
-                                <div className="contact-icon"><i className="fab fa-github"></i></div>
-                                <h3>GitHub</h3>
-                                <p>github.com/mhiu05</p>
-                            </a>
-                            <div className="contact-card" id="contact-location">
-                                <div className="contact-icon"><i className="fas fa-map-marker-alt"></i></div>
-                                <h3>Địa điểm</h3>
-                                <p>Hà Nội, Việt Nam</p>
-                            </div>
                         </div>
                     </div>
                 </section>

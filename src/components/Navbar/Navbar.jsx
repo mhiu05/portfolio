@@ -15,7 +15,7 @@ export default function Navbar() {
     }, []);
 
     useEffect(() => {
-        const sections = ['about', 'education', 'projects', 'experience', 'skills', 'certificates', 'contact'];
+        const sections = ['about', 'education', 'projects', 'experience', 'skills', 'certificates'];
 
         const handleScroll = () => {
             sections.forEach((sectionId) => {
@@ -56,7 +56,6 @@ export default function Navbar() {
                     <a href="#experience" className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`} onClick={closeMenu}>Kinh nghiệm</a>
                     <a href="#skills" className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`} onClick={closeMenu}>Kỹ năng</a>
                     <a href="#certificates" className={`nav-link ${activeSection === 'certificates' ? 'active' : ''}`} onClick={closeMenu}>Chứng chỉ</a>
-                    <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`} onClick={closeMenu}>Liên hệ</a>
                 </div>
                 <button
                     className={`nav-toggle ${menuOpen ? 'active' : ''}`}
