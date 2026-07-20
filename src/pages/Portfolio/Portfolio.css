@@ -1173,99 +1173,7 @@
     word-break: break-all;
 }
 
-/* ===========================
-   PORTFOLIO SIDEBAR
-   =========================== */
-.portfolio-page {
-    display: flex;
-    gap: 40px;
-}
-
-.portfolio-sidebar {
-    position: sticky;
-    top: 120px;
-    width: 200px;
-    height: fit-content;
-    flex-shrink: 0;
-}
-
-.sidebar-content {
-    padding: 20px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    transition: all var(--transition-fast);
-}
-
-.sidebar-title {
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--text-primary);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid var(--border-color);
-}
-
-.sidebar-title i {
-    color: var(--accent-primary);
-    font-size: 1rem;
-}
-
-.sidebar-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-menu li {
-    margin: 0;
-    padding: 0;
-}
-
-.sidebar-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 14px;
-    color: var(--text-secondary);
-    text-decoration: none;
-    border-radius: 10px;
-    transition: all var(--transition-fast);
-    border-left: 3px solid transparent;
-    font-size: 0.85rem;
-    margin-bottom: 6px;
-}
-
-.sidebar-link:hover {
-    color: var(--text-primary);
-    background: rgba(124, 92, 252, 0.08);
-    border-left-color: var(--accent-primary);
-    transform: translateX(4px);
-}
-
-.sidebar-link.active {
-    color: var(--text-primary);
-    background: rgba(124, 92, 252, 0.12);
-    border-left-color: var(--accent-primary);
-    font-weight: 600;
-}
-
-.sidebar-link i {
-    font-size: 0.9rem;
-    width: 16px;
-    text-align: center;
-    color: var(--accent-primary);
-}
-
-.portfolio-content {
-    flex: 1;
-    min-width: 0;
-}
+/* Sidebar removed - layout adjusted */
 
 /* ===========================
    RESPONSIVE
@@ -1285,17 +1193,6 @@
     }
 
     .sidebar-title {
-        font-size: 0.8rem;
-        margin-bottom: 16px;
-        padding-bottom: 12px;
-    }
-
-    .sidebar-link {
-        padding: 10px 12px;
-        font-size: 0.8rem;
-        margin-bottom: 4px;
-    }
-
     .about-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1312,37 +1209,6 @@
 }
 
 @media (max-width: 768px) {
-    .portfolio-page {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .portfolio-sidebar {
-        position: static;
-        width: 100%;
-        height: auto;
-        margin-bottom: 30px;
-    }
-
-    .sidebar-content {
-        padding: 16px;
-    }
-
-    .sidebar-menu {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .sidebar-link {
-        flex: 0 1 calc(50% - 4px);
-        padding: 10px 12px;
-        font-size: 0.8rem;
-        margin-bottom: 0;
-        text-align: center;
-        justify-content: center;
-    }
-
     .portfolio-content {
         width: 100%;
     }
@@ -1413,19 +1279,6 @@
 }
 
 @media (max-width: 480px) {
-    .sidebar-link {
-        flex: 0 1 calc(33.33% - 6px);
-        padding: 8px 10px;
-        font-size: 0.75rem;
-    }
-
-    .sidebar-link span {
-        display: none;
-    }
-
-    .sidebar-title span {
-        display: none;
-    }
 
     .contact-grid {
         grid-template-columns: 1fr;

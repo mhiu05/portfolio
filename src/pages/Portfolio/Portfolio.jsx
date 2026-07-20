@@ -3,7 +3,6 @@ import './Portfolio.css';
 
 export default function Portfolio() {
     const [activeTab, setActiveTab] = useState('tab-rppg');
-    const [activeSection, setActiveSection] = useState('about');
 
     // Setup GPA gradient SVG
     const svgRef = useRef(null);
@@ -58,130 +57,8 @@ export default function Portfolio() {
         return () => observer.disconnect();
     }, []);
 
-    // Track active section for sidebar
-    useEffect(() => {
-        const sections = ['about', 'education', 'projects', 'experience', 'skills', 'certificates', 'contact'];
-
-        const handleScroll = () => {
-            sections.forEach((sectionId) => {
-                const section = document.getElementById(sectionId);
-                if (section) {
-                    const rect = section.getBoundingClientRect();
-                    if (rect.top <= 150 && rect.bottom >= 150) {
-                        setActiveSection(sectionId);
-                    }
-                }
-            });
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     return (
         <div className="portfolio-page">
-            {/* Sidebar Navigation */}
-            <nav className="portfolio-sidebar">
-                <div className="sidebar-content">
-                    <div className="sidebar-title">
-                        <i className="fas fa-compass"></i> Mục lục
-                    </div>
-                    <ul className="sidebar-menu">
-                        <li>
-                            <a
-                                href="#about"
-                                className={`sidebar-link ${activeSection === 'about' ? 'active' : ''}`}
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-                                }}
-                            >
-                                <i className="fas fa-user"></i>
-                                <span>Giới thiệu</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#education"
-                                className={`sidebar-link ${activeSection === 'education' ? 'active' : ''}`}
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    document.getElementById('education').scrollIntoView({ behavior: 'smooth' });
-                                }}
-                            >
-                                <i className="fas fa-graduation-cap"></i>
-                                <span>Giáo dục</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#projects"
-                                className={`sidebar-link ${activeSection === 'projects' ? 'active' : ''}`}
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-                                }}
-                            >
-                                <i className="fas fa-rocket"></i>
-                                <span>Dự án</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#experience"
-                                className={`sidebar-link ${activeSection === 'experience' ? 'active' : ''}`}
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
-                                }}
-                            >
-                                <i className="fas fa-briefcase"></i>
-                                <span>Kinh nghiệm</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#skills"
-                                className={`sidebar-link ${activeSection === 'skills' ? 'active' : ''}`}
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
-                                }}
-                            >
-                                <i className="fas fa-tools"></i>
-                                <span>Kỹ năng</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#certificates"
-                                className={`sidebar-link ${activeSection === 'certificates' ? 'active' : ''}`}
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    document.getElementById('certificates').scrollIntoView({ behavior: 'smooth' });
-                                }}
-                            >
-                                <i className="fas fa-award"></i>
-                                <span>Chứng chỉ</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#contact"
-                                className={`sidebar-link ${activeSection === 'contact' ? 'active' : ''}`}
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-                                }}
-                            >
-                                <i className="fas fa-envelope"></i>
-                                <span>Liên hệ</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
             <div className="portfolio-content">
                 {/* About Section */}
                 <section className="section" id="about">
