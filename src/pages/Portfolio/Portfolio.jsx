@@ -444,7 +444,7 @@ export default function Portfolio() {
                                 { img: '/figures/math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội Toán học Việt Nam' },
                                 { img: '/figures/Applications of Algorithm.jpg', icon: 'fas fa-calculator', date: 'Aug. 2025', title: 'Application of Algorithm', issuer: 'SAMSUNG x PTIT' },
                                 { img: '/figures/chemistry.jpg', icon: 'fas fa-calculator', date: 'Mar. 2025', title: 'Giải Ba HSG cấp tỉnh môn Hóa học', issuer: 'Sở GD&ĐT Bắc Ninh' },
-                                { img: '/figures/khochockythuat.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Giải Tư Khoa học Kỹ thuật cấp tỉnh', issuer: 'Sở GD&ĐT Bắc Ninh' },
+                                { img: '/figures/khoahockythua.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Giải Tư Khoa học Kỹ thuật cấp tỉnh', issuer: 'Sở GD&ĐT Bắc Ninh' },
                             ].map((cert) => (
                                 <div className="cert-card" key={cert.title}>
                                     <div className="cert-image">
