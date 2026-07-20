@@ -65,7 +65,6 @@ export default function Portfolio() {
                     <div className="container">
                         <div className="section-header">
                             <span className="section-tag"><i className="fas fa-user"></i> Giới thiệu</span>
-                            <h2 className="section-title">Về <span className="gradient-text">tôi</span></h2>
                         </div>
                         <div className="about-grid">
                             <div className="about-text">
@@ -138,8 +137,7 @@ export default function Portfolio() {
                 <section className="section section-alt" id="education">
                     <div className="container">
                         <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-graduation-cap"></i> Lịch sử học tập</span>
-                            <h2 className="section-title">Giáo dục</h2>
+                            <span className="section-tag"><i className="fas fa-graduation-cap"></i> Giáo dục</span>
                         </div>
                         <div className="timeline">
                             <div className="timeline-item">
@@ -178,8 +176,7 @@ export default function Portfolio() {
                 <section className="section" id="projects">
                     <div className="container">
                         <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-rocket"></i> Những gì tôi đã xây dựng</span>
-                            <h2 className="section-title">Dự án <span className="gradient-text">nổi bật</span></h2>
+                            <span className="section-tag"><i className="fas fa-rocket"></i> Dự án</span>
                         </div>
                         <div className="project-showcase">
                             {/* Project Hero Card */}
@@ -385,8 +382,7 @@ export default function Portfolio() {
                 <section className="section section-alt" id="experience">
                     <div className="container">
                         <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-briefcase"></i> Lịch sử làm việc</span>
-                            <h2 className="section-title">Kinh nghiệm & <span className="gradient-text">Làm việc</span></h2>
+                            <span className="section-tag"><i className="fas fa-briefcase"></i> Kinh nghiệm</span>
                         </div>
                         <div className="experience-card">
                             <div className="experience-icon-wrapper"><i className="fas fa-microchip"></i></div>
@@ -406,8 +402,7 @@ export default function Portfolio() {
                 <section className="section" id="skills">
                     <div className="container">
                         <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-tools"></i> Công nghệ</span>
-                            <h2 className="section-title">Kỹ năng & <span className="gradient-text">Công nghệ</span></h2>
+                            <span className="section-tag"><i className="fas fa-tools"></i> Kỹ năng</span>
                         </div>
                         <div className="skills-grid">
                             {[
@@ -439,8 +434,7 @@ export default function Portfolio() {
                 <section className="section section-alt" id="certificates">
                     <div className="container">
                         <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-award"></i> Thành tựu</span>
-                            <h2 className="section-title">Chứng chỉ & <span className="gradient-text">Giải thưởng</span></h2>
+                            <span className="section-tag"><i className="fas fa-award"></i> Chứng chỉ</span>
                         </div>
                         <div className="certificates-grid">
                             {[
