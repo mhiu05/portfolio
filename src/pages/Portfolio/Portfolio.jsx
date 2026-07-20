@@ -64,20 +64,20 @@ export default function Portfolio() {
                 <section className="section" id="about">
                     <div className="container">
                         <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-user"></i> Giới thiệu</span>
+                            <span className="section-tag"><i className="fas fa-user"></i> About</span>
                         </div>
                         <div className="about-grid">
                             <div className="about-text">
                                 <p>
-                                    Hiện tại mình đang là sinh viên ngành <strong>Khoa học Máy tính</strong> khóa D23 (2023) tại Học viện Công nghệ Bưu chính Viễn thông (PTIT) Cơ sở Hà Nội. Mình là một người yêu thích việc học hỏi những điều mới, bất kể là thứ gì miễn là mình cảm thấy thú vị.
+                                    I am currently a student majoring in <strong>Computer Science</strong> (D23 - 2023 cohort) at Posts and Telecommunications Institute of Technology (PTIT) in Hanoi. I am a person who loves learning new things, regardless of what it is, as long as I find it interesting.
                                 </p>
 
                                 <p>
-                                    <strong>Về tính cách</strong>, mình có khả năng <strong>thích nghi tốt</strong> với mọi môi trường, làm việc <strong>có trách nhiệm</strong> và luôn cố gắng hoàn thành tốt nhiệm vụ được giao. Dù là một người khá hướng nội, thích dành thời gian cho bản thân và những người thân thiết, mình vẫn rất trân trọng và cố gắng duy trì các mối quan hệ xã hội. Mình tin rằng sự kết hợp giữa khả năng thích nghi, tinh thần trách nhiệm và sự hướng nội đã giúp mình phát triển toàn diện cả về cá nhân lẫn chuyên môn.
+                                    <strong>Regarding my personality</strong>, I am highly <strong>adaptable</strong> to any environment, work <strong>responsibly</strong>, and always strive to complete assigned tasks well. Although I am quite introverted, preferring to spend time with myself and close ones, I deeply value and try to maintain my social relationships. I believe that the combination of adaptability, a sense of responsibility, and introversion has helped me develop comprehensively both personally and professionally.
                                 </p>
 
                                 <p>
-                                    <strong>Đam mê chính</strong> của mình là <strong>Trí tuệ Nhân tạo (AI)</strong>. Mình không chỉ hứng thú với việc ứng dụng AI để <strong>giải quyết</strong> các <strong>vấn đề thực tế</strong>, mà còn <strong>say mê nghiên cứu</strong> sâu về nó qua từng bài toán (vì hiểu một cách gần gũi hơn, AI chính là toán học).
+                                    <strong>My main passion</strong> is <strong>Artificial Intelligence (AI)</strong>. I am not only interested in applying AI to <strong>solve real-world problems</strong> but also <strong>passionate about researching</strong> it deeply through various problems (since, fundamentally, AI is mathematics).
                                 </p>
 
                                 <div className="about-info-cards">
@@ -91,7 +91,7 @@ export default function Portfolio() {
                                     <a href="tel:+84375049906" className="info-card">
                                         <i className="fas fa-phone-alt"></i>
                                         <div>
-                                            <span className="info-label">Điện thoại</span>
+                                            <span className="info-label">Phone</span>
                                             <span className="info-value">0375 049 906</span>
                                         </div>
                                     </a>
@@ -105,8 +105,8 @@ export default function Portfolio() {
                                     <div className="info-card">
                                         <i className="fas fa-map-marker-alt"></i>
                                         <div>
-                                            <span className="info-label">Địa điểm</span>
-                                            <span className="info-value">Hà Nội, Việt Nam</span>
+                                            <span className="info-label">Location</span>
+                                            <span className="info-value">Hanoi, Vietnam</span>
                                         </div>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@ export default function Portfolio() {
                 <section className="section section-alt" id="education">
                     <div className="container">
                         <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-graduation-cap"></i> Giáo dục</span>
+                            <span className="section-tag"><i className="fas fa-graduation-cap"></i> Education</span>
                         </div>
                         <div className="timeline">
                             <div className="timeline-item">
@@ -147,8 +147,8 @@ export default function Portfolio() {
                                         <h3>Posts and Telecommunications Institute of Technology</h3>
                                         <span className="timeline-date"><i className="far fa-calendar-alt"></i> 2023 — 2027</span>
                                     </div>
-                                    <p className="timeline-degree">Kỹ sư Khoa học Máy tính</p>
-                                    <p className="timeline-location"><i className="fas fa-map-marker-alt"></i> Hà Đông, Hà Nội</p>
+                                    <p className="timeline-degree">Bachelor of Engineering in Computer Science</p>
+                                    <p className="timeline-location"><i className="fas fa-map-marker-alt"></i> Ha Dong, Hanoi</p>
                                     <div className="gpa-badge">
                                         <div className="gpa-circle">
                                             <svg viewBox="0 0 100 100" ref={svgRef}>
@@ -160,10 +160,10 @@ export default function Portfolio() {
                                         <span className="gpa-label">GPA / 4.0</span>
                                     </div>
                                     <div className="education-achievements">
-                                        <h4 className="achievements-title"><i className="fas fa-trophy"></i> Additional Infomation</h4>
+                                        <h4 className="achievements-title"><i className="fas fa-trophy"></i> Additional Information</h4>
                                         <ul className="achievements-list">
-                                            <li><i className="fas fa-award"></i> Học bổng đầu vào PTIT</li>
-                                            <li><i className="fas fa-award"></i> Học bổng Khuyến khích học tập (Kỳ 4)</li>
+                                            <li><i className="fas fa-award"></i> PTIT Entrance Scholarship</li>
+                                            <li><i className="fas fa-award"></i> Academic Excellence Scholarship (Semester 4)</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -265,30 +265,30 @@ export default function Portfolio() {
                                         {/* Real-time */}
                                         <div className={`tab-panel ${activeTab === 'tab-realtime' ? 'active' : ''}`}>
                                             <div className="tab-panel-header">
-                                                <h4>Truyền Streaming WebSocket Thời gian Thực</h4>
-                                                <span className="tab-badge">Phân tích Trực tiếp</span>
+                                                <h4>Real-time WebSocket Streaming</h4>
+                                                <span className="tab-badge">Live Analysis</span>
                                             </div>
                                             <ul className="detail-list">
-                                                <li><i className="fas fa-check-circle"></i><span><strong>Điểm cuối WebSocket</strong> (<code>ws://host/ws/stream</code>) chấp nhận các khung hình webcam trực tiếp.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Mỗi kết nối duy trì một <strong>SessionState</strong> bị cô lập — hỗ trợ các phiên đa người dùng đồng thời.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Tự động lưu các bản ghi đo lường vào <strong>PostgreSQL</strong> khi phiên vượt quá 5 giây.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Các lệnh gọi Frontend (<code>useWebSocket.js</code> + <code>useWebcam.js</code>) xử lý quay phim và kết nối lại.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>WebSocket endpoint</strong> (<code>ws://host/ws/stream</code>) accepts live webcam frames.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Each connection maintains an isolated <strong>SessionState</strong> — supporting concurrent multi-user sessions.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Automatically saves measurement records to <strong>PostgreSQL</strong> when the session exceeds 5 seconds.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Frontend hooks (<code>useWebSocket.js</code> + <code>useWebcam.js</code>) handle video capture and reconnection.</span></li>
                                             </ul>
                                         </div>
 
                                         {/* Async */}
                                         <div className={`tab-panel ${activeTab === 'tab-async' ? 'active' : ''}`}>
                                             <div className="tab-panel-header">
-                                                <h4>Đường Ống Xử lý Video Bất Đồng Bộ</h4>
-                                                <span className="tab-badge">Công việc Nền</span>
+                                                <h4>Asynchronous Video Processing Pipeline</h4>
+                                                <span className="tab-badge">Background Jobs</span>
                                             </div>
                                             <ul className="detail-list">
-                                                <li><i className="fas fa-check-circle"></i><span><code>POST /video/upload-async</code> → lưu trong <strong>S3</strong> → tạo công việc → gửi đến <strong>Celery + Redis</strong>.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>Celery Worker</strong> tải xuống → phát hiện khuôn mặt → suy luận rPPG → lưu kết quả.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Kiến trúc 4 dịch vụ được Dockerized được điều phối qua Docker Compose.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><code>POST /video/upload-async</code> → save to <strong>S3</strong> → create job → dispatch to <strong>Celery + Redis</strong>.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Celery Worker</strong> downloads → detects face → rPPG inference → saves results.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Dockerized 4-service architecture orchestrated via Docker Compose.</span></li>
                                             </ul>
                                             <div className="flow-diagram">
-                                                <div className="flow-step"><i className="fas fa-upload"></i><span>Tải lên</span></div>
+                                                <div className="flow-step"><i className="fas fa-upload"></i><span>Upload</span></div>
                                                 <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
                                                 <div className="flow-step"><i className="fas fa-cloud"></i><span>S3</span></div>
                                                 <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
@@ -296,29 +296,29 @@ export default function Portfolio() {
                                                 <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
                                                 <div className="flow-step"><i className="fas fa-brain"></i><span>rPPG</span></div>
                                                 <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
-                                                <div className="flow-step"><i className="fas fa-database"></i><span>CSDL</span></div>
+                                                <div className="flow-step"><i className="fas fa-database"></i><span>Database</span></div>
                                             </div>
                                         </div>
 
                                         {/* RAG */}
                                         <div className={`tab-panel ${activeTab === 'tab-rag' ? 'active' : ''}`}>
                                             <div className="tab-panel-header">
-                                                <h4>Chatbot Y tế — Advanced RAG</h4>
+                                                <h4>Medical Chatbot — Advanced RAG</h4>
                                                 <span className="tab-badge">NLP / LLM</span>
                                             </div>
                                             <ul className="detail-list">
-                                                <li><i className="fas fa-check-circle"></i><span>Advanced RAG: <strong>Viết lại Truy vấn</strong> → <strong>Tìm kiếm Lai</strong> (FAISS + BM25) → <strong>Re-ranking bằng Cross-Encoder</strong> → <strong>Google Gemini</strong>.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Nhập cơ sở kiến thức từ <code>Medical_book.pdf</code> — hỗ trợ PDF, Markdown, văn bản thô.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Chuỗi RAG được tải lười — khởi động lạnh nhanh và hiệu quả bộ nhớ.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Advanced RAG: <strong>Query Rewriting</strong> → <strong>Hybrid Search</strong> (FAISS + BM25) → <strong>Cross-Encoder Re-ranking</strong> → <strong>Google Gemini</strong>.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Knowledge base ingestion from <code>Medical_book.pdf</code> — supports PDF, Markdown, and raw text.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Lazy-loaded RAG chain — fast cold starts and memory efficient.</span></li>
                                             </ul>
                                             <div className="flow-diagram">
-                                                <div className="flow-step"><i className="fas fa-question-circle"></i><span>Truy vấn</span></div>
+                                                <div className="flow-step"><i className="fas fa-question-circle"></i><span>Query</span></div>
                                                 <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
-                                                <div className="flow-step"><i className="fas fa-pen"></i><span>Viết lại</span></div>
+                                                <div className="flow-step"><i className="fas fa-pen"></i><span>Rewrite</span></div>
                                                 <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
-                                                <div className="flow-step"><i className="fas fa-search"></i><span>Tìm kiếm</span></div>
+                                                <div className="flow-step"><i className="fas fa-search"></i><span>Search</span></div>
                                                 <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
-                                                <div className="flow-step"><i className="fas fa-sort-amount-down"></i><span>Xếp hạng lại</span></div>
+                                                <div className="flow-step"><i className="fas fa-sort-amount-down"></i><span>Re-rank</span></div>
                                                 <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
                                                 <div className="flow-step"><i className="fas fa-magic"></i><span>Gemini</span></div>
                                             </div>
@@ -331,11 +331,11 @@ export default function Portfolio() {
                                                 <span className="tab-badge">Web UI</span>
                                             </div>
                                             <ul className="detail-list">
-                                                <li><i className="fas fa-check-circle"></i><span><strong>3 trang chính</strong>: Trang chủ, Trực tiếp (webcam + dấu sống), Tải lên (video bất đồng bộ + lịch sử).</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Trang Live: luồng webcam với <strong>lớp phủ hộp giới hạn khuôn mặt</strong>, Thẻ Dấu sống thời gian thực.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>Widget chatbot AI</strong> nổi có thể truy cập từ mọi trang.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Quản lý trạng thái qua <strong>Zustand</strong>, CSS Modules cho kiểu định dạng có phạm vi.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>Xác thực Supabase</strong> — người dùng đăng nhập/đăng ký để duy trì lịch sử đo lường sức khỏe.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>3 trang chính</strong>: Trang chủ, Trực tiếp (webcam + dấu sống), Upload (video bất đồng bộ + lịch sử).</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Live page: webcam stream with <strong>face bounding box overlay</strong>, real-time Vitals Cards.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Floating AI chatbot widget</strong> accessible from any page.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>State management via <strong>Zustand</strong>, CSS Modules for scoped styling.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Supabase Auth</strong> — user login/signup to persist health measurement history.</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -344,11 +344,11 @@ export default function Portfolio() {
 
                             {/* Benchmark */}
                             <div className="project-card">
-                                <h3 className="project-card-subtitle"><i className="fas fa-chart-bar"></i> Kết quả Benchmark</h3>
-                                <p className="project-card-desc">Đánh giá trên 10 subjects dùng dưới 3 điều kiện thực tế. Hệ thống đạt độ chính xác cao (sai số &lt; 2 bpm) thậm chí trong cả các điều kiện motion hay talk.</p>
+                                <h3 className="project-card-subtitle"><i className="fas fa-chart-bar"></i> Benchmark Results</h3>
+                                <p className="project-card-desc">Evaluated on 10 subjects under 3 real-world conditions. The system achieves high accuracy (error &lt; 2 bpm) even under motion or talking conditions.</p>
                                 <div className="benchmark-image">
-                                    <img src="/figures/benchmark_normal.png" alt="Kết quả Benchmark — Tình trạng ngồi bình thường" loading="lazy" />
-                                    <div className="demo-caption"><i className="fas fa-flask"></i> Benchmark đo lường HR — Bình thường (ngồi yên), mô hình: FactorizePhys</div>
+                                    <img src="/figures/benchmark_normal.png" alt="Benchmark Results — Normal (resting)" loading="lazy" />
+                                    <div className="demo-caption"><i className="fas fa-flask"></i> HR Measurement Benchmark — Normal (resting), mô hình: FactorizePhys</div>
                                 </div>
                             </div>
 
@@ -382,17 +382,17 @@ export default function Portfolio() {
                 <section className="section section-alt" id="experience">
                     <div className="container">
                         <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-briefcase"></i> Kinh nghiệm</span>
+                            <span className="section-tag"><i className="fas fa-briefcase"></i> Experience</span>
                         </div>
                         <div className="experience-card">
                             <div className="experience-icon-wrapper"><i className="fas fa-microchip"></i></div>
                             <div className="experience-content">
                                 <h3>Vin Univiersity - AI In Action</h3>
-                                <span className="experience-role">Học viên, onsite, Tháng 7/2026 - Hiện tại</span>
+                                <span className="experience-role">Trainee, Onsite, Jul 2026 - Present</span>
                                 <ul className="experience-list">
-                                    <li><i className="fas fa-chevron-right"></i><span>Thực chiến theo chuẩn khung năng lực SFIA</span></li>
-                                    <li><i className="fas fa-chevron-right"></i><span>3 tuần thực học về kỹ năng AI, giải quyết vấn đề</span></li>
-                                    <li><i className="fas fa-chevron-right"></i><span>9 tuần thực chiến dự án AI với mentor và doanh nghiệp (VSF)</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>Practical training following the SFIA competency framework</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>3 weeks of intensive study on AI skills and problem solving</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>9 weeks of hands-on AI project execution with mentors and enterprise partners (VSF)</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -400,10 +400,10 @@ export default function Portfolio() {
                             <div className="experience-icon-wrapper"><i className="fas fa-cube"></i></div>
                             <div className="experience-content">
                                 <h3>Phenikaa-X Joint Stock Company</h3>
-                                <span className="experience-role">Cộng tác viên - Annotator, Remote, Tháng 6/2026 - hiện tại</span>
+                                <span className="experience-role">Collaborator - Annotator, Remote, Jun 2026 - Present</span>
                                 <ul className="experience-list">
-                                    <li><i className="fas fa-chevron-right"></i><span>Sử dụng OpenVPN, Xpra để làm việc từ xa với dữ liệu point cloud 3D từ LiDAR sensor</span></li>
-                                    <li><i className="fas fa-chevron-right"></i><span>Tinh chỉnh (annotate/refine) pointcloud của object nhằm đảm bảo chất lượng dữ liệu training</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>Utilized OpenVPN and Xpra for remote work with 3D point cloud data from LiDAR sensors</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>Annotated and refined object point clouds to ensure training data quality</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -414,28 +414,22 @@ export default function Portfolio() {
                 <section className="section" id="activities">
                     <div className="container">
                         <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-users"></i> Hoạt động</span>
+                            <span className="section-tag"><i className="fas fa-graduation-cap"></i> Activities</span>
                         </div>
+
+                        {/* Activity 1: AI Research Department */}
                         <div className="experience-card">
-                            <div className="experience-icon-wrapper"><i className="fas fa-hands-helping"></i></div>
+                            <div className="experience-icon-wrapper"><i className="fas fa-microscope"></i></div>
                             <div className="experience-content">
-                                <h3>Tên hoạt động / Câu lạc bộ (Mock Data)</h3>
-                                <span className="experience-role">Vị trí / Vai trò — Thời gian (Mock)</span>
-                                <ul className="experience-list">
-                                    <li><i className="fas fa-chevron-right"></i><span>Mô tả chi tiết công việc hoặc đóng góp của bạn tại đây (Mock 1).</span></li>
-                                    <li><i className="fas fa-chevron-right"></i><span>Thành tích nổi bật hoặc kỹ năng học được (Mock 2).</span></li>
-                                </ul>
+                                <h3>Member of AI Research Department at PTIT AI Young Talent (PAYT) Club</h3>
                             </div>
                         </div>
+
+                        {/* Activity 2: ICPC Finals */}
                         <div className="experience-card">
-                            <div className="experience-icon-wrapper"><i className="fas fa-users-cog"></i></div>
+                            <div className="experience-icon-wrapper"><i className="fas fa-trophy"></i></div>
                             <div className="experience-content">
-                                <h3>Tên dự án tình nguyện / Sự kiện (Mock Data)</h3>
-                                <span className="experience-role">Vị trí / Vai trò — Thời gian (Mock)</span>
-                                <ul className="experience-list">
-                                    <li><i className="fas fa-chevron-right"></i><span>Mô tả chi tiết công việc hoặc đóng góp của bạn tại đây (Mock 1).</span></li>
-                                    <li><i className="fas fa-chevron-right"></i><span>Thành tích nổi bật hoặc kỹ năng học được (Mock 2).</span></li>
-                                </ul>
+                                <h3>Participated in the ICPC PTIT 2025 Finals</h3>
                             </div>
                         </div>
                     </div>
@@ -445,17 +439,17 @@ export default function Portfolio() {
                 <section className="section section-alt" id="certificates">
                     <div className="container">
                         <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-award"></i> Chứng chỉ</span>
+                            <span className="section-tag"><i className="fas fa-award"></i> Certificates</span>
                         </div>
                         <div className="certificates-grid">
                             {[
                                 { img: '/figures/toeic.jpg', icon: 'fas fa-language', date: 'Apr. 2026', title: 'TOEIC Listening & Reading: 720', issuer: 'ETS' },
                                 { img: '/figures/DeepLearning-NVIDIA.jpg', icon: 'fas fa-microchip', date: 'Aug. 2025', title: 'Fundamentals of Deep Learning', issuer: 'NVIDIA' },
                                 { img: '/figures/AI_ML_Fundamentals.png', icon: 'fas fa-brain', date: 'Apr. 2025', title: 'AI/ML Fundamentals', issuer: 'PTIT x LA TROBE UNIVERSITY' },
-                                { img: '/figures/math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội Toán học Việt Nam' },
+                                { img: '/figures/math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Participant in National Student Mathematical Olympiad', issuer: 'Vietnam Mathematical Society' },
                                 { img: '/figures/Applications of Algorithm.jpg', icon: 'fas fa-calculator', date: 'Aug. 2025', title: 'Application of Algorithm', issuer: 'SAMSUNG x PTIT' },
-                                { img: '/figures/chemistry.jpg', icon: 'fas fa-calculator', date: 'Mar. 2023', title: 'Giải Ba HSG cấp tỉnh môn Hóa học', issuer: 'Sở GD&ĐT Bắc Ninh' },
-                                { img: '/figures/khoahockythua.jpg', icon: 'fas fa-calculator', date: 'Feb. 2023', title: 'Giải Tư Khoa học Kỹ thuật cấp tỉnh', issuer: 'Sở GD&ĐT Bắc Ninh' },
+                                { img: '/figures/chemistry.jpg', icon: 'fas fa-calculator', date: 'Mar. 2023', title: 'Third Prize in Provincial Chemistry Olympiad', issuer: 'Bac Ninh Department of Education and Training' },
+                                { img: '/figures/khoahockythua.jpg', icon: 'fas fa-calculator', date: 'Feb. 2023', title: 'Fourth Prize in Provincial Science and Engineering Fair', issuer: 'Bac Ninh Department of Education and Training' },
                             ].map((cert) => (
                                 <div className="cert-card" key={cert.title}>
                                     <div className="cert-image">
@@ -484,7 +478,7 @@ export default function Portfolio() {
                 <section className="section" id="skills">
                     <div className="container">
                         <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-tools"></i> Kỹ năng</span>
+                            <span className="section-tag"><i className="fas fa-tools"></i> Skills</span>
                         </div>
                         <div className="skills-grid">
                             {[
