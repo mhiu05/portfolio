@@ -176,7 +176,7 @@ export default function Portfolio() {
                 <section className="section" id="projects">
                     <div className="container">
                         <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-rocket"></i> Dự án</span>
+                            <span className="section-tag"><i className="fas fa-rocket"></i> Projects</span>
                         </div>
                         <div className="project-showcase">
                             {/* Project Hero Card */}
@@ -196,15 +196,15 @@ export default function Portfolio() {
                                 <h3 className="project-title">Non-Invasive Health Analysis System</h3>
                                 <p className="project-date"><i className="far fa-calendar-alt"></i> first commit on Nov 11, 2025</p>
                                 <p className="project-description">
-                                    Một nền tảng đo lường các chỉ số sức khỏe như: Nhịp tim (HR), biến thiên nhịp tim (HRV) và tín hiệu BVP,
-                                    cung cấp thông tin quan trọng về trạng thái hoạt động của hệ thần kinh tự chủ, khả năng phục hồi sau căng thẳng,
-                                    và nguy cơ mắc bệnh tim mạch từ các video khuôn mặt. Có phân tích webcam thời gian thực qua WebSocket, xử lý video ngoại tuyến
-                                    với hàng đợi công việc bất đồng bộ, và một chatbot y tế AI sử dụng advanced RAG.
+                                    A platform for measuring health indicators such as: Heart Rate (HR), Heart Rate Variability (HRV), and BVP signals,
+                                    providing vital information about the autonomic nervous system's state, stress resilience,
+                                    and cardiovascular disease risk from facial videos. Features real-time webcam analysis via WebSocket, offline video processing
+                                    with asynchronous task queues, and an AI medical chatbot using advanced RAG.
                                 </p>
                                 <div className="project-demo-image">
                                     <img src="/figures/project_demo.png" alt="Non-Invasive Health Analysis System — Live measurement interface" loading="lazy" />
                                     <div className="demo-caption">
-                                        <i className="fas fa-camera"></i> Giao diện phân tích trực tiếp — HR, Tốc độ chớp mắt, SNR & dạng sóng BVP thời gian thực
+                                        <i className="fas fa-camera"></i> Live analysis interface — HR, Blink Rate, SNR & real-time BVP waveform
                                     </div>
                                 </div>
                             </div>
@@ -212,21 +212,21 @@ export default function Portfolio() {
                             {/* Architecture Diagram */}
                             <div className="project-card">
                                 <h3 className="project-card-subtitle"><i className="fas fa-sitemap"></i> Architecture</h3>
-                                <p className="project-card-desc">Thiết kế với 4 lớp chính: Computer Vision (rPPG), Signal Processing, Chatbot RAG, và Web Fullstack — kết nối thông qua WebSocket, REST API, và một hàng đợi làm việc đã phân tác Celery + Redis.</p>
+                                <p className="project-card-desc">Designed with 4 main layers: Computer Vision (rPPG), Signal Processing, RAG Chatbot, and Web Fullstack — connected via WebSocket, REST API, and a distributed Celery + Redis task queue.</p>
                                 <div className="project-architecture-image">
-                                    <img src="/figures/project_architecture.png" alt="Sơ đồ kiến trúc Hệ thống Phân tích Sức khỏe Không tiếp xúc" loading="lazy" />
+                                    <img src="/figures/project_architecture.png" alt="Architecture Diagram of the Non-Invasive Health Analysis System" loading="lazy" />
                                 </div>
                             </div>
 
                             {/* Feature Tabs */}
                             <div className="project-card">
-                                <h3 className="project-card-subtitle"><i className="fas fa-layer-group"></i> Chi tiết hơn về dự án</h3>
+                                <h3 className="project-card-subtitle"><i className="fas fa-layer-group"></i> Project Details</h3>
                                 <div className="feature-tabs">
                                     <div className="tab-buttons">
                                         {[
                                             { id: 'tab-rppg', icon: 'fas fa-wave-square', label: 'rPPG' },
-                                            { id: 'tab-realtime', icon: 'fas fa-broadcast-tower', label: 'real time' },
-                                            { id: 'tab-async', icon: 'fas fa-cogs', label: 'Công việc không đồng bộ' },
+                                            { id: 'tab-realtime', icon: 'fas fa-broadcast-tower', label: 'Real-time' },
+                                            { id: 'tab-async', icon: 'fas fa-cogs', label: 'Async Tasks' },
                                             { id: 'tab-rag', icon: 'fas fa-robot', label: 'Chatbot RAG' },
                                             { id: 'tab-frontend', icon: 'fab fa-react', label: 'Frontend' },
                                         ].map((tab) => (
@@ -244,21 +244,21 @@ export default function Portfolio() {
                                         {/* rPPG Engine */}
                                         <div className={`tab-panel ${activeTab === 'tab-rppg' ? 'active' : ''}`}>
                                             <div className="tab-panel-header">
-                                                <h4>Công cụ rPPG & Xử lý Tín hiệu</h4>
-                                                <span className="tab-badge">Thị giác Máy tính</span>
+                                                <h4>Computer Vision & Signal Processing</h4>
+                                                <span className="tab-badge">Computer Vision</span>
                                             </div>
                                             <ul className="detail-list">
-                                                <li><i className="fas fa-check-circle"></i><span>Triển khai <strong>FactorizePhys</strong> (3D-CNN + FSAM dựa trên NMF) qua <strong>ONNX Runtime</strong> — suy luận nhẹ không cần phụ thuộc PyTorch.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>MediaPipe Face Mesh</strong> để phát hiện khuôn mặt thời gian thực, mở rộng hộp giới hạn và thay đổi kích thước cắt.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Đường ống xử lý từng khúc: <strong>SessionState</strong> duy trì bộ đệm lăn 180 khung hình cho mỗi phiên.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Xử lý tín hiệu: <strong>detrend → Butterworth bandpass → phát hiện đỉnh FFT</strong> để tính nhịp tim.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Trích xuất các chỉ số HRV: <strong>RMSSD, SDNN, PNN50</strong>, cộng với đánh giá chất lượng SNR.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Implemented NMF-based 3D-CNN + FSAM architecture via <strong>ONNX Runtime</strong> — lightweight inference without PyTorch dependencies.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>MediaPipe Face Mesh</strong> for real-time face detection, bounding box expansion, and crop resizing.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Chunk-based processing pipeline: <strong>SessionState</strong> maintains a rolling buffer of 180 frames per session.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Signal processing: <strong>detrend → Butterworth bandpass → FFT peak detection</strong> to calculate heart rate.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Extract HRV metrics: <strong>RMSSD, SDNN, PNN50</strong>, along with SNR quality assessment.</span></li>
                                             </ul>
                                             <div className="tab-metrics">
-                                                <div className="metric-item"><span className="metric-value">0.04</span><span className="metric-label">MAE (bpm) — Ngồi yên</span></div>
-                                                <div className="metric-item"><span className="metric-value">0.83</span><span className="metric-label">MAE (bpm) — Chợng đầu</span></div>
-                                                <div className="metric-item"><span className="metric-value">1.67</span><span className="metric-label">MAE (bpm) — Nói chuyện</span></div>
-                                                <div className="metric-item"><span className="metric-value">&lt;2</span><span className="metric-label">sai số bpm — Tất cả điều kiện</span></div>
+                                                <div className="metric-item"><span className="metric-value">0.04</span><span className="metric-label">MAE (bpm) — Resting</span></div>
+                                                <div className="metric-item"><span className="metric-value">0.83</span><span className="metric-label">MAE (bpm) — Head Motion</span></div>
+                                                <div className="metric-item"><span className="metric-value">1.67</span><span className="metric-label">MAE (bpm) — Talking</span></div>
+                                                <div className="metric-item"><span className="metric-value">&lt;2</span><span className="metric-label">bpm error — All conditions</span></div>
                                             </div>
                                         </div>
 
@@ -410,6 +410,76 @@ export default function Portfolio() {
                     </div>
                 </section>
 
+                {/* Activities Section */}
+                <section className="section" id="activities">
+                    <div className="container">
+                        <div className="section-header">
+                            <span className="section-tag"><i className="fas fa-users"></i> Hoạt động</span>
+                        </div>
+                        <div className="experience-card">
+                            <div className="experience-icon-wrapper"><i className="fas fa-hands-helping"></i></div>
+                            <div className="experience-content">
+                                <h3>Tên hoạt động / Câu lạc bộ (Mock Data)</h3>
+                                <span className="experience-role">Vị trí / Vai trò — Thời gian (Mock)</span>
+                                <ul className="experience-list">
+                                    <li><i className="fas fa-chevron-right"></i><span>Mô tả chi tiết công việc hoặc đóng góp của bạn tại đây (Mock 1).</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>Thành tích nổi bật hoặc kỹ năng học được (Mock 2).</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="experience-card">
+                            <div className="experience-icon-wrapper"><i className="fas fa-users-cog"></i></div>
+                            <div className="experience-content">
+                                <h3>Tên dự án tình nguyện / Sự kiện (Mock Data)</h3>
+                                <span className="experience-role">Vị trí / Vai trò — Thời gian (Mock)</span>
+                                <ul className="experience-list">
+                                    <li><i className="fas fa-chevron-right"></i><span>Mô tả chi tiết công việc hoặc đóng góp của bạn tại đây (Mock 1).</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>Thành tích nổi bật hoặc kỹ năng học được (Mock 2).</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Certificates Section */}
+                <section className="section section-alt" id="certificates">
+                    <div className="container">
+                        <div className="section-header">
+                            <span className="section-tag"><i className="fas fa-award"></i> Chứng chỉ</span>
+                        </div>
+                        <div className="certificates-grid">
+                            {[
+                                { img: '/figures/toeic.jpg', icon: 'fas fa-language', date: 'Apr. 2026', title: 'TOEIC Listening & Reading: 720', issuer: 'ETS' },
+                                { img: '/figures/DeepLearning-NVIDIA.jpg', icon: 'fas fa-microchip', date: 'Aug. 2025', title: 'Fundamentals of Deep Learning', issuer: 'NVIDIA' },
+                                { img: '/figures/AI_ML_Fundamentals.png', icon: 'fas fa-brain', date: 'Apr. 2025', title: 'AI/ML Fundamentals', issuer: 'PTIT x LA TROBE UNIVERSITY' },
+                                { img: '/figures/math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội Toán học Việt Nam' },
+                                { img: '/figures/Applications of Algorithm.jpg', icon: 'fas fa-calculator', date: 'Aug. 2025', title: 'Application of Algorithm', issuer: 'SAMSUNG x PTIT' },
+                                { img: '/figures/chemistry.jpg', icon: 'fas fa-calculator', date: 'Mar. 2023', title: 'Giải Ba HSG cấp tỉnh môn Hóa học', issuer: 'Sở GD&ĐT Bắc Ninh' },
+                                { img: '/figures/khoahockythua.jpg', icon: 'fas fa-calculator', date: 'Feb. 2023', title: 'Giải Tư Khoa học Kỹ thuật cấp tỉnh', issuer: 'Sở GD&ĐT Bắc Ninh' },
+                            ].map((cert) => (
+                                <div className="cert-card" key={cert.title}>
+                                    <div className="cert-image">
+                                        <img src={cert.img} alt={cert.title} loading="lazy" />
+                                        <div className="cert-overlay">
+                                            <a href={cert.img} target="_blank" rel="noopener noreferrer" className="cert-view-btn"><i className="fas fa-search-plus"></i> View</a>
+                                        </div>
+                                    </div>
+                                    <div className="cert-info">
+                                        <div className="cert-icon-header">
+                                            <div className="cert-icon"><i className={cert.icon}></i></div>
+                                            <span className="cert-date">{cert.date}</span>
+                                        </div>
+                                        <div className="cert-content">
+                                            <h3>{cert.title}</h3>
+                                            <span className="cert-issuer">{cert.issuer}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* Skills Section */}
                 <section className="section" id="skills">
                     <div className="container">
@@ -458,45 +528,6 @@ export default function Portfolio() {
                                                 <span>{item.name}</span>
                                             </div>
                                         ))}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* Certificates Section */}
-                <section className="section section-alt" id="certificates">
-                    <div className="container">
-                        <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-award"></i> Chứng chỉ</span>
-                        </div>
-                        <div className="certificates-grid">
-                            {[
-                                { img: '/figures/toeic.jpg', icon: 'fas fa-language', date: 'Apr. 2026', title: 'TOEIC Listening & Reading: 720', issuer: 'ETS' },
-                                { img: '/figures/DeepLearning-NVIDIA.jpg', icon: 'fas fa-microchip', date: 'Aug. 2025', title: 'Fundamentals of Deep Learning', issuer: 'NVIDIA' },
-                                { img: '/figures/AI_ML_Fundamentals.png', icon: 'fas fa-brain', date: 'Apr. 2025', title: 'AI/ML Fundamentals', issuer: 'PTIT x LA TROBE UNIVERSITY' },
-                                { img: '/figures/math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội Toán học Việt Nam' },
-                                { img: '/figures/Applications of Algorithm.jpg', icon: 'fas fa-calculator', date: 'Aug. 2025', title: 'Application of Algorithm', issuer: 'SAMSUNG x PTIT' },
-                                { img: '/figures/chemistry.jpg', icon: 'fas fa-calculator', date: 'Mar. 2023', title: 'Giải Ba HSG cấp tỉnh môn Hóa học', issuer: 'Sở GD&ĐT Bắc Ninh' },
-                                { img: '/figures/khoahockythua.jpg', icon: 'fas fa-calculator', date: 'Feb. 2023', title: 'Giải Tư Khoa học Kỹ thuật cấp tỉnh', issuer: 'Sở GD&ĐT Bắc Ninh' },
-                            ].map((cert) => (
-                                <div className="cert-card" key={cert.title}>
-                                    <div className="cert-image">
-                                        <img src={cert.img} alt={cert.title} loading="lazy" />
-                                        <div className="cert-overlay">
-                                            <a href={cert.img} target="_blank" rel="noopener noreferrer" className="cert-view-btn"><i className="fas fa-search-plus"></i> View</a>
-                                        </div>
-                                    </div>
-                                    <div className="cert-info">
-                                        <div className="cert-icon-header">
-                                            <div className="cert-icon"><i className={cert.icon}></i></div>
-                                            <span className="cert-date">{cert.date}</span>
-                                        </div>
-                                        <div className="cert-content">
-                                            <h3>{cert.title}</h3>
-                                            <span className="cert-issuer">{cert.issuer}</span>
-                                        </div>
                                     </div>
                                 </div>
                             ))}

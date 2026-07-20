@@ -15,7 +15,7 @@ export default function Navbar() {
     }, []);
 
     useEffect(() => {
-        const sections = ['about', 'education', 'projects', 'experience', 'skills', 'certificates'];
+        const sections = ['about', 'education', 'projects', 'experience', 'activities', 'certificates', 'skills'];
 
         const handleScroll = () => {
             sections.forEach((sectionId) => {
@@ -54,8 +54,9 @@ export default function Navbar() {
                     <a href="#education" className={`nav-link ${activeSection === 'education' ? 'active' : ''}`} onClick={closeMenu}>Giáo dục</a>
                     <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`} onClick={closeMenu}>Dự án</a>
                     <a href="#experience" className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`} onClick={closeMenu}>Kinh nghiệm</a>
-                    <a href="#skills" className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`} onClick={closeMenu}>Kỹ năng</a>
+                    <a href="#activities" className={`nav-link ${activeSection === 'activities' ? 'active' : ''}`} onClick={closeMenu}>Hoạt động</a>
                     <a href="#certificates" className={`nav-link ${activeSection === 'certificates' ? 'active' : ''}`} onClick={closeMenu}>Chứng chỉ</a>
+                    <a href="#skills" className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`} onClick={closeMenu}>Kỹ năng</a>
                 </div>
                 <button
                     className={`nav-toggle ${menuOpen ? 'active' : ''}`}
