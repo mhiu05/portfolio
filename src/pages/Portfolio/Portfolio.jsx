@@ -440,8 +440,11 @@ export default function Portfolio() {
                             {[
                                 { img: '/figures/portfolio_toeic.jpg', icon: 'fas fa-language', date: 'Apr. 2026', title: 'TOEIC Listening & Reading: 720', issuer: 'ETS' },
                                 { img: '/figures/portfolio_DeepLearning-NVIDIA.jpg', icon: 'fas fa-microchip', date: 'Aug. 2025', title: 'Fundamentals of Deep Learning', issuer: 'NVIDIA' },
-                                { img: '/figures/portfolio_AI_ML_Fundamentals.png', icon: 'fas fa-brain', date: 'Sep. 2025', title: 'AI/ML Fundamentals', issuer: 'PTIT AI Club' },
-                                { img: '/figures/portfolio_math.jpg', icon: 'fas fa-calculator', date: 'Jun. 2025', title: 'Mathematics for Machine Learning', issuer: 'Self-study' },
+                                { img: '/figures/portfolio_AI_ML_Fundamentals.png', icon: 'fas fa-brain', date: 'Apr. 2025', title: 'AI/ML Fundamentals', issuer: 'PTIT x LA TROBE UNIVERSITY' },
+                                { img: '/figures/portfolio_math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội toán học Việt Nam' },
+                                // { img: '/figures/portfolio_math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội toán học Việt Nam' },
+                                // { img: '/figures/portfolio_math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội toán học Việt Nam' },
+                                // { img: '/figures/portfolio_math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội toán học Việt Nam' },
                             ].map((cert) => (
                                 <div className="cert-card" key={cert.title}>
                                     <div className="cert-image">
