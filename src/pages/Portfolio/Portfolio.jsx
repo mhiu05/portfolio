@@ -145,7 +145,7 @@ export default function Portfolio() {
                                 <div className="timeline-content">
                                     <div className="timeline-header">
                                         <h3>Posts and Telecommunications Institute of Technology</h3>
-                                        <span className="timeline-date"><i className="far fa-calendar-alt"></i> 2023 — 2027</span>
+                                        <span className="timeline-date"><i className="far fa-calendar-alt"></i> 2023 — 2028</span>
                                     </div>
                                     <p className="timeline-degree">Bachelor of Engineering in Computer Science</p>
                                     <p className="timeline-location"><i className="fas fa-map-marker-alt"></i> Ha Dong, Hanoi</p>
