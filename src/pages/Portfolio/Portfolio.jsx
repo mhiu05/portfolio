@@ -160,7 +160,7 @@ export default function Portfolio() {
                                         <span className="gpa-label">GPA / 4.0</span>
                                     </div>
                                     <div className="education-achievements">
-                                        <h4 className="achievements-title"><i className="fas fa-trophy"></i> Học bổng & Thành tích</h4>
+                                        <h4 className="achievements-title"><i className="fas fa-trophy"></i> Additional Infomation</h4>
                                         <ul className="achievements-list">
                                             <li><i className="fas fa-award"></i> Học bổng đầu vào PTIT</li>
                                             <li><i className="fas fa-award"></i> Học bổng Khuyến khích học tập (Kỳ 4)</li>
@@ -202,7 +202,7 @@ export default function Portfolio() {
                                     với hàng đợi công việc bất đồng bộ, và một chatbot y tế AI sử dụng advanced RAG.
                                 </p>
                                 <div className="project-demo-image">
-                                    <img src="/figures/portfolio_project_demo.png" alt="Non-Invasive Health Analysis System — Live measurement interface" loading="lazy" />
+                                    <img src="/figures/project_demo.png" alt="Non-Invasive Health Analysis System — Live measurement interface" loading="lazy" />
                                     <div className="demo-caption">
                                         <i className="fas fa-camera"></i> Giao diện phân tích trực tiếp — HR, Tốc độ chớp mắt, SNR & dạng sóng BVP thời gian thực
                                     </div>
@@ -214,7 +214,7 @@ export default function Portfolio() {
                                 <h3 className="project-card-subtitle"><i className="fas fa-sitemap"></i> Architecture</h3>
                                 <p className="project-card-desc">Thiết kế với 4 lớp chính: Computer Vision (rPPG), Signal Processing, Chatbot RAG, và Web Fullstack — kết nối thông qua WebSocket, REST API, và một hàng đợi làm việc đã phân tác Celery + Redis.</p>
                                 <div className="project-architecture-image">
-                                    <img src="/figures/portfolio_project_architecture.png" alt="Sơ đồ kiến trúc Hệ thống Phân tích Sức khỏe Không tiếp xúc" loading="lazy" />
+                                    <img src="/figures/project_architecture.png" alt="Sơ đồ kiến trúc Hệ thống Phân tích Sức khỏe Không tiếp xúc" loading="lazy" />
                                 </div>
                             </div>
 
@@ -347,7 +347,7 @@ export default function Portfolio() {
                                 <h3 className="project-card-subtitle"><i className="fas fa-chart-bar"></i> Kết quả Benchmark</h3>
                                 <p className="project-card-desc">Đánh giá trên 10 subjects dùng dưới 3 điều kiện thực tế. Hệ thống đạt độ chính xác cao (sai số &lt; 2 bpm) thậm chí trong cả các điều kiện motion hay talk.</p>
                                 <div className="benchmark-image">
-                                    <img src="/figures/portfolio_benchmark_normal.png" alt="Kết quả Benchmark — Tình trạng ngồi bình thường" loading="lazy" />
+                                    <img src="/figures/benchmark_normal.png" alt="Kết quả Benchmark — Tình trạng ngồi bình thường" loading="lazy" />
                                     <div className="demo-caption"><i className="fas fa-flask"></i> Benchmark đo lường HR — Bình thường (ngồi yên), mô hình: FactorizePhys</div>
                                 </div>
                             </div>
@@ -387,11 +387,23 @@ export default function Portfolio() {
                         <div className="experience-card">
                             <div className="experience-icon-wrapper"><i className="fas fa-microchip"></i></div>
                             <div className="experience-content">
-                                <h3>Câu lạc bộ Tài năng trẻ AI PTIT</h3>
-                                <span className="experience-role">Thành viên — Phòng ban Nghiên cứu AI</span>
+                                <h3>Vin Univiersity - AI In Action</h3>
+                                <span className="experience-role">Học viên, onsite, Tháng 7/2026 - Hiện tại</span>
                                 <ul className="experience-list">
-                                    <li><i className="fas fa-chevron-right"></i><span>Tiến hành nghiên cứu ở cấp độ đại học về các công nghệ giám sát sức khỏe không tiếp xúc (rPPG).</span></li>
-                                    <li><i className="fas fa-chevron-right"></i><span>Nghiên cứu và đánh giá các phương pháp huấn luyện LLM bao gồm quy trình RLHF (PPO, DPO) và tinh chỉnh hiệu quả với họ mô hình Qwen.</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>Thực chiến theo chuẩn khung năng lực SFIA</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>3 tuần thực học về kỹ năng AI, giải quyết vấn đề</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>9 tuần thực chiến dự án AI với mentor và doanh nghiệp (VSF)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="experience-card">
+                            <div className="experience-icon-wrapper"><i className="fas fa-cube"></i></div>
+                            <div className="experience-content">
+                                <h3>Phenikaa-X Joint Stock Company</h3>
+                                <span className="experience-role">Cộng tác viên - Annotator, Remote, Tháng 6/2026 - hiện tại</span>
+                                <ul className="experience-list">
+                                    <li><i className="fas fa-chevron-right"></i><span>Sử dụng OpenVPN, Xpra để làm việc từ xa với dữ liệu point cloud 3D từ LiDAR sensor</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>Tinh chỉnh (annotate/refine) pointcloud của object nhằm đảm bảo chất lượng dữ liệu training</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -406,10 +418,33 @@ export default function Portfolio() {
                         </div>
                         <div className="skills-grid">
                             {[
-                                { icon: 'fas fa-code', title: 'Ngôn ngữ lập trình', items: [{ icon: 'fab fa-python', name: 'Python' }, { icon: 'fas fa-copyright', name: 'C / C++' }] },
-                                { icon: 'fas fa-brain', title: 'AI / ML', items: [{ icon: 'fas fa-fire', name: 'PyTorch' }, { icon: 'fas fa-robot', name: 'Transformers' }, { icon: 'fas fa-link', name: 'LangChain' }, { icon: 'fas fa-search', name: 'RAG' }, { icon: 'fas fa-eye', name: 'OpenCV' }, { icon: 'fas fa-chart-line', name: 'Scikit-learn' }] },
-                                { icon: 'fas fa-server', title: 'Backend & Cơ sở hạ tầng', items: [{ icon: 'fas fa-bolt', name: 'FastAPI' }, { icon: 'fas fa-database', name: 'PostgreSQL' }, { icon: 'fab fa-docker', name: 'Docker' }] },
-                                { icon: 'fas fa-wrench', title: 'Công cụ', items: [{ icon: 'fab fa-git-alt', name: 'Git' }, { icon: 'fab fa-google', name: 'Google Colab' }, { icon: 'fab fa-kaggle', name: 'Kaggle' }, { icon: 'fas fa-smile', name: 'Hugging Face' }] },
+                                { icon: 'fas fa-code', title: 'Language & Framework', items: [{ icon: 'fab fa-python', name: 'Python' }, { icon: 'fas fa-copyright', name: 'C / C++' }, { icon: 'fas fa-fire', name: 'PyTorch' }, { icon: 'fas fa-eye', name: 'OpenCV' }, { icon: 'fas fa-chart-line', name: 'Scikit-learn' }, { icon: 'fas fa-table', name: 'Pandas' }] },
+                                {
+                                    icon: 'fas fa-brain', title: 'CV, NLP & GenAI', items: [
+                                        { icon: 'fas fa-database', name: 'RAG (FAISS, BM25)' },
+                                        { icon: 'fas fa-sliders', name: 'Fine-tuning (LoRA/QLoRA)' },
+                                        { icon: 'fas fa-closed-captioning', name: 'Image Captioning (ResNet50, LSTM)' },
+                                        { icon: 'fas fa-vector-square', name: 'Object Detection (YOLO)' }
+                                    ]
+                                },
+                                {
+                                    icon: 'fas fa-server', title: 'Backend, Database & Infrastructure', items: [
+                                        { icon: 'fas fa-bolt', name: 'FastAPI' },
+                                        { icon: 'fas fa-database', name: 'PostgreSQL' },
+                                        { icon: 'fas fa-leaf', name: 'MongoDB' },
+                                        { icon: 'fab fa-docker', name: 'Docker' },
+                                        { icon: 'fab fa-vercel', name: 'Vercel' }
+                                    ]
+                                },
+                                {
+                                    icon: 'fas fa-wrench', title: 'Tools & AI Tools', items: [
+                                        { icon: 'fab fa-git-alt', name: 'Git/GitHub' },
+                                        { icon: 'fas fa-flask', name: 'Google Colab' },
+                                        { icon: 'fab fa-kaggle', name: 'Kaggle' },
+                                        { icon: 'fas fa-face-smile', name: 'Hugging Face' },
+                                        { icon: 'fas fa-wand-magic-sparkles', name: 'Claude Code, Gemini, Cursor, Codex, Github Copilot' }
+                                    ]
+                                },
                             ].map((category) => (
                                 <div className="skill-category" key={category.title}>
                                     <div className="skill-category-header">
@@ -443,8 +478,8 @@ export default function Portfolio() {
                                 { img: '/figures/AI_ML_Fundamentals.png', icon: 'fas fa-brain', date: 'Apr. 2025', title: 'AI/ML Fundamentals', issuer: 'PTIT x LA TROBE UNIVERSITY' },
                                 { img: '/figures/math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Tham gia kỳ thi Olympic toán học Sinh viên', issuer: 'Hội Toán học Việt Nam' },
                                 { img: '/figures/Applications of Algorithm.jpg', icon: 'fas fa-calculator', date: 'Aug. 2025', title: 'Application of Algorithm', issuer: 'SAMSUNG x PTIT' },
-                                { img: '/figures/chemistry.jpg', icon: 'fas fa-calculator', date: 'Mar. 2025', title: 'Giải Ba HSG cấp tỉnh môn Hóa học', issuer: 'Sở GD&ĐT Bắc Ninh' },
-                                { img: '/figures/khoahockythua.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Giải Tư Khoa học Kỹ thuật cấp tỉnh', issuer: 'Sở GD&ĐT Bắc Ninh' },
+                                { img: '/figures/chemistry.jpg', icon: 'fas fa-calculator', date: 'Mar. 2023', title: 'Giải Ba HSG cấp tỉnh môn Hóa học', issuer: 'Sở GD&ĐT Bắc Ninh' },
+                                { img: '/figures/khoahockythua.jpg', icon: 'fas fa-calculator', date: 'Feb. 2023', title: 'Giải Tư Khoa học Kỹ thuật cấp tỉnh', issuer: 'Sở GD&ĐT Bắc Ninh' },
                             ].map((cert) => (
                                 <div className="cert-card" key={cert.title}>
                                     <div className="cert-image">

@@ -47,7 +47,7 @@ export default function Navbar() {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
             <div className="nav-container">
                 <a href="#about" className="nav-logo" onClick={closeMenu}>
-                    mhiu05
+                    Nguyen Minh Hieu
                 </a>
                 <div className={`nav-links ${menuOpen ? 'active' : ''}`} id="navLinks">
                     <a href="#about" className={`nav-link ${activeSection === 'about' ? 'active' : ''}`} onClick={closeMenu}>Giới thiệu</a>
