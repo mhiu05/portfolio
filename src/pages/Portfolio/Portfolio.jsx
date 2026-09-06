@@ -79,7 +79,7 @@ export default function Portfolio() {
                                 </p>
 
                                 <p>
-                                    <strong>My main passion</strong> is <strong>Artificial Intelligence (AI)</strong>. I am not only interested in applying AI to <strong>solve real-world problems</strong> but also <strong>passionate about researching</strong> it deeply through various problems (since, fundamentally, AI is mathematics).
+                                    <strong>My main passion</strong> is <strong>researching AI</strong>, and recently, I’ve also been exploring and learning more about <strong>AI Agents</strong>. I am not only interested in applying AI to <strong>solve real-world problems</strong> but also <strong>passionate about researching</strong> it deeply through various problems (since, fundamentally, AI is mathematics).
                                 </p>
 
                                 <div className="about-info-cards">
@@ -162,10 +162,11 @@ export default function Portfolio() {
                                         <span className="gpa-label">GPA / 4.0</span>
                                     </div>
                                     <div className="education-achievements">
-                                        <h4 className="achievements-title"><i className="fas fa-trophy"></i> Additional Information</h4>
+                                        <h4 className="achievements-title"><i className="fas fa-award"></i> Additional Information</h4>
                                         <ul className="achievements-list">
-                                            <li><i className="fas fa-award"></i> PTIT Entrance Scholarship</li>
-                                            <li><i className="fas fa-award"></i> Academic Excellence Scholarship (Semester 4)</li>
+                                            <li><i className="fas fa-award"></i> Entrance Scholarship, Academic Excellence Scholarship (Semester 4)</li>
+                                            <li><i className="fas fa-microscope"></i> Member of AI Research Department at PTIT AI Young Talent (PAYT) Club</li>
+                                            <li><i className="fas fa-trophy"></i> Participated in the ICPC PTIT 2025 Finals</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -205,14 +206,15 @@ export default function Portfolio() {
                                 className={`project-switch-btn ${activeProject === 'vda' ? 'active' : ''}`}
                                 onClick={() => setActiveProject('vda')}
                             >
-                                <div className="psb-icon psb-icon-vda"><i className="fas fa-diagram-project"></i></div>
+                                <div className="psb-icon psb-icon-vda"><i className="fas fa-shield-halved"></i></div>
                                 <div className="psb-content">
                                     <span className="psb-label">Project 2</span>
-                                    <span className="psb-title">VDaAgent — Data Profiling</span>
+                                    <span className="psb-title">VDaAgent — Evidence-First Workspace</span>
                                     <span className="psb-tags">
                                         <span>LangGraph</span>
                                         <span>FastAPI</span>
-                                        <span>Next.js</span>
+                                        <span>DuckDB</span>
+                                        <span>Next.js 15</span>
                                     </span>
                                 </div>
                                 <i className="fas fa-chevron-right psb-arrow"></i>
@@ -424,25 +426,36 @@ export default function Portfolio() {
                             <div className="project-card featured vda-featured">
                                 <div className="project-card-glow vda-glow"></div>
                                 <div className="project-header">
-                                    <div className="project-icon project-icon-vda"><i className="fas fa-diagram-project"></i></div>
+                                    <div className="project-icon project-icon-vda"><i className="fas fa-shield-halved"></i></div>
                                     <div className="project-links">
-                                        <span className="project-wip-badge"><i className="fas fa-hard-hat"></i> In Development</span>
+                                        <a href="https://github.com/mhiu05/VDaAgent" target="_blank" rel="noopener noreferrer" className="project-link" aria-label="GitHub repository">
+                                            <i className="fab fa-github"></i>
+                                        </a>
                                     </div>
                                 </div>
-                                <h3 className="project-title">VDaAgent — Evidence-First Data Profiling Workspace</h3>
-                                <p className="project-date"><i className="far fa-calendar-alt"></i> Started Jul 2026 · Active development</p>
+                                <h3 className="project-title">VDaAgent - Data Profiling</h3>
+                                <p className="project-date"><i className="far fa-calendar-alt"></i> Architecture &amp; System Engineering · 2026</p>
                                 <p className="project-description">
-                                    An evidence-first workspace for data profiling and visual analytics. The core unit is a <strong>Profile Run</strong> — deterministic profiling of CSV, TSV, Parquet, JSON, MySQL, MongoDB, and DuckDB sources — followed by AI-powered chart planning, Q&amp;A, drift comparison, and immutable report snapshots. Built with a multi-service architecture on Azure.
+                                    An enterprise-grade, evidence-first workspace for tabular data profiling and visual analytics. Designed around five core architectural pillars: <strong>Evidence-First Invariant</strong>, <strong>Bounded Execution</strong>, <strong>Workspace Isolation</strong>, <strong>Durable Async Workflows</strong>, and <strong>Human-in-the-Loop Governance</strong>. Guides analysts from heterogeneous tabular data (CSV, TSV, Parquet, JSON, MySQL, MongoDB, DuckDB) into verified statistical profiles, intelligent chart planning, conversational Q&amp;A with fail-closed validation, and immutable audit-ready report snapshots.
                                 </p>
-                                {/* User flow */}
+
+                                {/* Live Demo Interface Preview */}
+                                <div className="project-demo-image vda-demo-image">
+                                    <img src="/figures/Home_VDaAgent.png" alt="VDaAgent — Profile Run Command Center Live Interface" loading="lazy" />
+                                    <div className="demo-caption vda-caption">
+                                        <i className="fas fa-desktop"></i>
+                                        <span><strong>Profile Run Command Center</strong> — Live dashboard with 10k-row reservoir sampling, real-time IQR outlier detection (16.6%), automated PII screening &amp; masking, and 4-stage deterministic provenance pipeline (Ingest → Compute → HITL Review → Ready).</span>
+                                    </div>
+                                </div>
+
+                                {/* User / Provenance Execution Stepper */}
                                 <div className="vda-flow">
                                     {[
-                                        { icon: 'fas fa-sign-in-alt', label: 'Login' },
-                                        { icon: 'fas fa-upload', label: 'Upload Dataset' },
-                                        { icon: 'fas fa-cogs', label: 'Profile Run' },
-                                        { icon: 'fas fa-user-check', label: 'HITL Review' },
-                                        { icon: 'fas fa-chart-bar', label: 'Charts / Q&A' },
-                                        { icon: 'fas fa-file-pdf', label: 'Report PDF' },
+                                        { icon: 'fas fa-file-import', label: '1. Ingest & SHA-256' },
+                                        { icon: 'fas fa-microchip', label: '2. DuckDB Compute' },
+                                        { icon: 'fas fa-user-shield', label: '3. HITL Review' },
+                                        { icon: 'fas fa-chart-line', label: '4. Command Center & AI' },
+                                        { icon: 'fas fa-file-contract', label: '5. Immutable Report' },
                                     ].map((step, i, arr) => (
                                         <div className="vda-flow-item" key={step.label}>
                                             <div className="vda-flow-step">
@@ -457,15 +470,15 @@ export default function Portfolio() {
 
                             {/* VDaAgent Tabs */}
                             <div className="project-card">
-                                <h3 className="project-card-subtitle"><i className="fas fa-layer-group"></i> Project Details</h3>
+                                <h3 className="project-card-subtitle"><i className="fas fa-layer-group"></i> Project Details &amp; Architecture</h3>
                                 <div className="feature-tabs">
                                     <div className="tab-buttons">
                                         {[
-                                            { id: 'tab-vda-overview', icon: 'fas fa-boxes', label: 'Overview' },
+                                            { id: 'tab-vda-overview', icon: 'fas fa-boxes', label: 'Overview & Principles' },
+                                            { id: 'tab-vda-command', icon: 'fas fa-desktop', label: 'Command Center' },
                                             { id: 'tab-vda-arch', icon: 'fas fa-sitemap', label: 'Architecture' },
-                                            { id: 'tab-vda-profiling', icon: 'fas fa-microscope', label: 'Profiling' },
                                             { id: 'tab-vda-agent', icon: 'fas fa-robot', label: 'Agent & Charts' },
-                                            { id: 'tab-vda-reports', icon: 'fas fa-file-alt', label: 'Reports' },
+                                            { id: 'tab-vda-reports', icon: 'fas fa-file-alt', label: 'Reports & Drift' },
                                         ].map((tab) => (
                                             <button
                                                 key={tab.id}
@@ -478,93 +491,140 @@ export default function Portfolio() {
                                         ))}
                                     </div>
                                     <div className="tab-panels">
-                                        {/* Overview */}
+                                        {/* Overview & 5 Principles */}
                                         <div className={`tab-panel ${activeVdaTab === 'tab-vda-overview' ? 'active' : ''}`}>
                                             <div className="tab-panel-header">
-                                                <h4>Product Overview</h4>
-                                                <span className="tab-badge vda-badge">Full-Stack Platform</span>
+                                                <h4>Core Architectural Principles</h4>
+                                                <span className="tab-badge vda-badge">Evidence-First System</span>
+                                            </div>
+                                            <p className="tab-panel-desc" style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '16px' }}>
+                                                VDaAgent guarantees verified quantitative truth by eliminating LLM hallucinations and bounding all execution stages through five strict rules:
+                                            </p>
+                                            <div className="vda-principles-grid">
+                                                <div className="vda-principle-card">
+                                                    <div className="vda-principle-header">
+                                                        <i className="fas fa-balance-scale"></i>
+                                                        <h5>1. Evidence-First Invariant</h5>
+                                                    </div>
+                                                    <p className="vda-principle-desc">
+                                                        All numbers must trace back to compute artifacts (DuckDB/pandas) or stored Official executions with SHA-256 hashes. Missing evidence triggers fail-closed abstention.
+                                                    </p>
+                                                </div>
+                                                <div className="vda-principle-card">
+                                                    <div className="vda-principle-header">
+                                                        <i className="fas fa-border-all"></i>
+                                                        <h5>2. Bounded Execution</h5>
+                                                    </div>
+                                                    <p className="vda-principle-desc">
+                                                        10k reservoir sampling by default, 50k preview / 500 result row caps, query timeouts, and allow-listed <code>QuerySpec</code> preventing arbitrary SQL or Python execution.
+                                                    </p>
+                                                </div>
+                                                <div className="vda-principle-card">
+                                                    <div className="vda-principle-header">
+                                                        <i className="fas fa-building-user"></i>
+                                                        <h5>3. Workspace Isolation</h5>
+                                                    </div>
+                                                    <p className="vda-principle-desc">
+                                                        Supabase Auth JWT verification via JWKS (ES256/RS256), dynamic membership verification via <code>X-Workspace-Id</code>, and Fernet-encrypted datasource credentials.
+                                                    </p>
+                                                </div>
+                                                <div className="vda-principle-card">
+                                                    <div className="vda-principle-header">
+                                                        <i className="fas fa-repeat"></i>
+                                                        <h5>4. Durable Asynchronous Workflows</h5>
+                                                    </div>
+                                                    <p className="vda-principle-desc">
+                                                        Profiling jobs run in background workers using PostgreSQL <code>SKIP LOCKED</code> with 300s lease renewal heartbeats and LangGraph checkpoint resume.
+                                                    </p>
+                                                </div>
+                                                <div className="vda-principle-card">
+                                                    <div className="vda-principle-header">
+                                                        <i className="fas fa-user-shield"></i>
+                                                        <h5>5. Human-in-the-Loop Governance</h5>
+                                                    </div>
+                                                    <p className="vda-principle-desc">
+                                                        PII detection (addresses, emails, phone numbers) and candidate keys require analyst verification; pending/confirmed PII is permanently masked from AI contexts.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="tab-metrics" style={{ marginTop: '24px' }}>
+                                                <div className="metric-item"><span className="metric-value">10,000</span><span className="metric-label">Reservoir Sample Rows</span></div>
+                                                <div className="metric-item"><span className="metric-value">15</span><span className="metric-label">Native Chart Types</span></div>
+                                                <div className="metric-item"><span className="metric-value">28</span><span className="metric-label">Time-Series Models</span></div>
+                                                <div className="metric-item"><span className="metric-value">Fail-Closed</span><span className="metric-label">Zero-Hallucination Gate</span></div>
+                                            </div>
+                                        </div>
+
+                                        {/* Command Center */}
+                                        <div className={`tab-panel ${activeVdaTab === 'tab-vda-command' ? 'active' : ''}`}>
+                                            <div className="tab-panel-header">
+                                                <h4>Profile Run Command Center</h4>
+                                                <span className="tab-badge vda-badge">Preview vs. Official</span>
                                             </div>
                                             <ul className="detail-list">
-                                                <li><i className="fas fa-check-circle"></i><span>Accepts <strong>CSV, TSV, Parquet, JSON</strong> uploads and connects to <strong>MySQL, MongoDB, DuckDB</strong> — all materialized to a secure bounded pipeline.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>Deterministic profiling</strong>: schema, quality, statistics, correlation, privacy proposals (PII) per column.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>Human-in-the-loop (HITL)</strong> review step: Analyst confirms, edits or rejects semantic type / candidate key / PII proposals before run completes.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>Evidence-first</strong> invariant: PII-confirmed columns are excluded from Agent/chart context. No raw rows are returned to the browser or report.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Workspace-scoped roles: <strong>Analyst</strong> for profiling/analytics, <strong>Admin</strong> for user/account management via Supabase Auth.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Live Profile Run Command Center</strong>: A consolidated dashboard tracking dataset telemetry, exact vs. approximate reservoir statistics, quasi-identifiers, and risk evaluations.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Two-Tier Execution Model</strong>:
+                                                    <br />• <em>Preview</em>: Rapid exploratory queries on bounded samples (up to 50k input rows, 50 output rows, 1-hour ephemeral TTL) for interactive speed.
+                                                    <br />• <em>Official Execution</em>: Re-executed on full dataset source within bounded policy (up to 500 result rows, immutable context version, result SHA-256 hash). Only Official executions qualify as evidence for reports.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Automated Risk &amp; Privacy Auditor</strong>: Detects outliers using IQR (e.g. 16.6% outliers on spatial coordinates), heuristic + LLM PII screening (e.g. zip code address signals with 60% confidence), and automatically masks values from downstream outputs.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Analysis Sessions &amp; Context Versioning</strong>: Every exploration creates an immutable <code>ContextVersion</code>. Analysts can filter, select columns, acknowledge data quality issues, and trigger auto-planned chart packs.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>4-Stage Deterministic Provenance</strong>: Ingest &amp; Canonical SHA-256 → DuckDB Reservoir Compute → HITL Metadata Review → Ready for Analysis.</span></li>
                                             </ul>
-                                            <div className="tab-metrics">
-                                                <div className="metric-item"><span className="metric-value">28</span><span className="metric-label">Forecast Models</span></div>
-                                                <div className="metric-item"><span className="metric-value">15</span><span className="metric-label">Chart Renderers</span></div>
-                                                <div className="metric-item"><span className="metric-value">3</span><span className="metric-label">Azure App Services</span></div>
-                                                <div className="metric-item"><span className="metric-value">∞</span><span className="metric-label">Profile Runs</span></div>
-                                            </div>
                                         </div>
 
                                         {/* Architecture */}
                                         <div className={`tab-panel ${activeVdaTab === 'tab-vda-arch' ? 'active' : ''}`}>
                                             <div className="tab-panel-header">
-                                                <h4>Multi-Service Architecture</h4>
-                                                <span className="tab-badge vda-badge">Azure Deployed</span>
+                                                <h4>Multi-Service Cloud Architecture</h4>
+                                                <span className="tab-badge vda-badge">Azure App Service</span>
                                             </div>
                                             <ul className="detail-list">
-                                                <li><i className="fas fa-check-circle"></i><span><strong>Next.js 15 / React 19</strong> frontend — SSR, Supabase PKCE auth, React Query, SSE consumer and server-side PDF route.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>FastAPI</strong> backend — REST/SSE, Bearer + X-Workspace-Id guard, workspace bootstrap, audit and all business workflows.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>Dedicated profiling worker</strong> — claims durable jobs via <code>SKIP LOCKED</code>, heartbeat lease renewal, LangGraph HITL resume.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>PostgreSQL / Supabase</strong> for all metadata, audit, LangGraph checkpoints, evidence and trace — never raw rows.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>CI/CD via <strong>GitHub Actions</strong>: Ruff, pytest, Playwright E2E, Vitest, typecheck → build/push images → Alembic migrate → restart 3 App Services → health check.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Next.js 15 App Router (React 19)</strong>: SSR, Supabase PKCE authentication, TanStack Query, SSE stream consumer, and server-side PDF generation via Playwright Core Chromium.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>FastAPI Backend (Python 3.11)</strong>: REST and Server-Sent Events (SSE) endpoints under <code>/api/v1</code>, Pydantic v2 schemas, request correlation tracing (<code>X-Correlation-Id</code>), and workspace isolation dependencies.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Dedicated Profiling Worker</strong>: Asynchronously claims durable jobs using PostgreSQL <code>SELECT ... FOR UPDATE SKIP LOCKED</code>, maintains 300s heartbeat lease renewal, and resumes LangGraph checkpoints after HITL review.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Storage &amp; Compute</strong>: PostgreSQL 16 for metadata, tenant state, audit logs, and LangGraph checkpoints; Supabase Storage for canonical immutable artifacts; DuckDB for file-backed in-process analytics.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>FastMCP Stdio Server</strong>: Exposes bounded profiling and charting tools to local AI assistants (Claude) via Model Context Protocol without public network exposure.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Azure CI/CD Deployment</strong>: GitHub Actions pipeline enforcing Ruff lint, pytest, Playwright E2E, Vitest, Docker image builds with immutable commit SHA tags, Alembic migrations, and rolling deploys across 3 Azure App Services.</span></li>
                                             </ul>
                                             <div className="flow-diagram">
-                                                <div className="flow-step"><i className="fas fa-globe"></i><span>Next.js</span></div>
+                                                <div className="flow-step"><i className="fas fa-globe"></i><span>Next.js 15</span></div>
                                                 <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
                                                 <div className="flow-step"><i className="fas fa-bolt"></i><span>FastAPI</span></div>
                                                 <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
                                                 <div className="flow-step"><i className="fas fa-cog"></i><span>Worker</span></div>
                                                 <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
-                                                <div className="flow-step"><i className="fas fa-database"></i><span>PostgreSQL</span></div>
+                                                <div className="flow-step"><i className="fas fa-database"></i><span>DuckDB &amp; PG</span></div>
                                             </div>
-                                        </div>
-
-                                        {/* Profiling */}
-                                        <div className={`tab-panel ${activeVdaTab === 'tab-vda-profiling' ? 'active' : ''}`}>
-                                            <div className="tab-panel-header">
-                                                <h4>Deterministic Profiling Engine</h4>
-                                                <span className="tab-badge vda-badge">DuckDB + pandas</span>
-                                            </div>
-                                            <ul className="detail-list">
-                                                <li><i className="fas fa-check-circle"></i><span><code>POST /profile</code> returns <strong>202 Accepted</strong>; client polls <code>GET /profiling-jobs/{'{jobId}'}</code> for status transitions: <em>queued → running → succeeded</em>.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Worker uses <code>SKIP LOCKED</code> for atomic job claim, bounded concurrency and finite retry with lease heartbeat.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Profiling graph (LangGraph) saves: row/column counts, column statistics, correlation, quality flags, PII proposals and provenance.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>External datasources (MySQL, MongoDB, DuckDB) are validated, credentials <strong>Fernet-encrypted</strong> at rest, then materialized to a temp file — max 1,000,000 rows.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Analyst HITL review: <code>PATCH /profile/{'{runId}'}/confirm</code> persists decisions and enqueues continuation for the worker to resume the LangGraph checkpoint.</span></li>
-                                            </ul>
                                         </div>
 
                                         {/* Agent & Charts */}
                                         <div className={`tab-panel ${activeVdaTab === 'tab-vda-agent' ? 'active' : ''}`}>
                                             <div className="tab-panel-header">
-                                                <h4>AI Agent, Charts &amp; Forecast</h4>
-                                                <span className="tab-badge vda-badge">LangGraph + LLM</span>
+                                                <h4>AI Agent, Charts &amp; Forecast Models</h4>
+                                                <span className="tab-badge vda-badge">LangGraph + Fail-Closed</span>
                                             </div>
                                             <ul className="detail-list">
-                                                <li><i className="fas fa-check-circle"></i><span><strong>Chart planner</strong> converts natural-language questions into a validated <code>QuerySpec</code> (allow-listed columns, analysis kind, aggregation, time grain). Deterministic fallback when LLM unavailable.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Analysis kinds: <strong>aggregate, histogram, scatter, box, heatmap, forecast, missing, correlation, cardinality, violin, donut, outlier</strong> — 15 native renderers.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>28 forecast model adapters</strong>: baseline, exponential smoothing, ARIMA, state-space, decomposable and ML. Hidden when dependency or data contract missing.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Q&amp;A Agent (<code>POST /qa/stream</code>) is evidence-scoped to the selected Profile Run; bounded short-term memory (8 messages, per-message truncation).</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>MCP stdio server</strong> (FastMCP) for trusted local processes — bounded profile/chart tools only, no raw-row or SQL execution paths.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>Google Calendar integration</strong>: OAuth per workspace/user, list/create/delete events via UI, API and MCP.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Multi-Node LangGraph QA Graph</strong>: Orchestrates input guardrails → query router (refusal, clarification, quantitative, qualitative) → structured bounded tools → scoped hybrid retrieval → output guardrails.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Fail-Closed Evidence Validator (<code>qa_validation.py</code>)</strong>: Verifies workspace binding, artifact SHA-256, tool success, and guarantees that every single numeric figure in the answer is grounded in verified evidence. If evidence is lacking, the agent abstains rather than inventing data.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Safe Chart Planner</strong>: Translates natural language questions into strongly-typed <code>QuerySpec</code> schemas (allow-listed columns, aggregation, time grain). Features a deterministic fast path for standard queries and structured LLM planning for multi-step reasoning.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>15 Native Chart Renderers</strong>: Aggregate bar/line, histogram, scatter plot, box plot, correlation matrix, heatmap, violin, donut, outlier distribution, and cardinality charts.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>28 Time-Series Forecast Adapters</strong>: Baseline, exponential smoothing, ARIMA, SARIMAX, Prophet-like decomposable models, and machine learning regressors. Adapters gracefully hide when prerequisites or data contracts are missing.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Scoped Hybrid Retrieval</strong>: Sparse (BM25) + dense vector search on workspace-bound <code>retrieval_documents</code> with automatic sparse fallback when embedding APIs are unreachable.</span></li>
                                             </ul>
                                         </div>
 
                                         {/* Reports */}
                                         <div className={`tab-panel ${activeVdaTab === 'tab-vda-reports' ? 'active' : ''}`}>
                                             <div className="tab-panel-header">
-                                                <h4>Immutable Report Snapshots &amp; Export</h4>
-                                                <span className="tab-badge vda-badge">PDF / JSON</span>
+                                                <h4>Immutable Reports &amp; Dataset Drift</h4>
+                                                <span className="tab-badge vda-badge">Cryptographic Snapshots &amp; PDF</span>
                                             </div>
                                             <ul className="detail-list">
-                                                <li><i className="fas fa-check-circle"></i><span>Report Draft is tied to a single Profile Run. Charts pinned to Draft must be <strong>Official evidence</strong> (promoted from Preview with result hash and provenance).</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span><strong>Snapshot</strong> freezes the Draft immutably. Submit → Review → Publish → Archive lifecycle then operates on the frozen snapshot, not live UI state.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>PDF rendered server-side by Next.js route using <strong>Playwright Core + Chromium</strong> after FastAPI authorizes the export source.</span></li>
-                                                <li><i className="fas fa-check-circle"></i><span>Drift comparison: <code>POST /profile/{'{runId}'}/drift</code> between two completed Profile Runs to detect schema/distribution shift.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Report Drafts &amp; Official Evidence</strong>: Report drafts are bound to a single Profile Run; only promoted Official executions with verified result hashes can be pinned into reports.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Cryptographic Snapshot Freezing</strong>: Report Snapshots freeze the entire structure, metrics, and charts with SHA-256 content hashing. Subsequent edits create a new draft version, ensuring an untampered audit trail.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Server-Side Chromium PDF Export</strong>: Rendered securely by a Next.js server route using headless Chromium (Playwright Core) after FastAPI authorizes the export request.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Dataset Drift Comparison</strong>: <code>POST /api/v1/profile/{'{runId}'}/drift</code> compares two completed Profile Runs to identify schema drift, null-rate inflation, and numerical distribution shifts over time.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Multi-Source Ingestion</strong>: Native ingestion from CSV, TSV, Parquet, JSON files, Google Drive OAuth, and direct connections to MySQL, MongoDB, and DuckDB with Fernet-encrypted credentials.</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -576,11 +636,11 @@ export default function Portfolio() {
                                 <h3 className="project-card-subtitle"><i className="fas fa-cubes"></i> Tech Stack</h3>
                                 <div className="project-tech-grid">
                                     {[
-                                        { label: 'Frontend', items: ['Next.js 15', 'React 19', 'React Query', 'TypeScript'] },
-                                        { label: 'Backend', items: ['FastAPI', 'LangGraph', 'Pydantic', 'Alembic'] },
-                                        { label: 'AI / Agent', items: ['LangGraph', 'LLM (pluggable)', 'FastMCP', 'LangSmith'] },
-                                        { label: 'Compute', items: ['DuckDB', 'pandas', 'NumPy', 'SciPy', '28 Forecast Models'] },
-                                        { label: 'Infrastructure', items: ['Azure App Service', 'PostgreSQL / Supabase', 'Supabase Auth', 'GitHub Actions', 'Docker'] },
+                                        { label: 'Frontend', items: ['Next.js 15', 'React 19', 'TypeScript (Strict)', 'TanStack Query', 'Tailwind CSS', 'Zod'] },
+                                        { label: 'Backend & API', items: ['FastAPI', 'Python 3.11', 'Pydantic v2', 'SQLAlchemy', 'Alembic', 'Server-Sent Events'] },
+                                        { label: 'AI & Agent', items: ['LangGraph', 'OpenAI / Gemini', 'FastMCP (stdio)', 'Fail-Closed QA Validator', 'LangSmith'] },
+                                        { label: 'Compute Engine', items: ['DuckDB', 'pandas', 'NumPy', 'SciPy', 'statsmodels', 'scikit-learn (28 Models)'] },
+                                        { label: 'Storage & Cloud', items: ['PostgreSQL 16', 'Supabase Auth & Storage', 'Azure App Service', 'Docker', 'GitHub Actions', 'Playwright Core'] },
                                     ].map((group) => (
                                         <div className="tech-group" key={group.label}>
                                             <span className="tech-group-label">{group.label}</span>
@@ -620,7 +680,7 @@ export default function Portfolio() {
                             <div className="experience-icon-wrapper"><i className="fas fa-cube"></i></div>
                             <div className="experience-content">
                                 <h3>Phenikaa-X Joint Stock Company</h3>
-                                <span className="experience-role">Collaborator - Annotator, Remote, Jun 2025 - Aug 2026</span>
+                                <span className="experience-role">Collaborator - Annotator, Remote, Jun 2026 - Aug 2026</span>
                                 <ul className="experience-list">
                                     <li><i className="fas fa-chevron-right"></i><span>Utilized OpenVPN and Xpra for remote work with 3D point cloud data from LiDAR sensors</span></li>
                                     <li><i className="fas fa-chevron-right"></i><span>Annotated and refined object point clouds to ensure training data quality</span></li>
@@ -697,38 +757,7 @@ export default function Portfolio() {
                     </div>
                 </section>
 
-                {/* Activities Section */}
-                <section className="section" id="activities">
-                    <div className="container">
-                        <div className="section-header">
-                            <span className="section-tag"><i className="fas fa-graduation-cap"></i> Activities</span>
-                        </div>
 
-                        {/* Activity 1: AI Research Department */}
-                        <div className="experience-card">
-                            <div className="experience-icon-wrapper"><i className="fas fa-microscope"></i></div>
-                            <div className="experience-content">
-                                <h3>Member of AI Research Department at PTIT AI Young Talent (PAYT) Club</h3>
-                            </div>
-                        </div>
-
-                        {/* Activity 2: ICPC Finals */}
-                        <div className="experience-card">
-                            <div className="experience-icon-wrapper"><i className="fas fa-trophy"></i></div>
-                            <div className="experience-content">
-                                <h3>Participated in the ICPC PTIT 2025 Finals</h3>
-                            </div>
-                        </div>
-
-                        {/* Activity 2: Olympic AI Finals */}
-                        <div className="experience-card">
-                            <div className="experience-icon-wrapper"><i className="fas fa-robot"></i></div>
-                            <div className="experience-content">
-                                <h3>Participated in the Olympic AI PTIT 2025 Finals</h3>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
                 {/* Certificates Section */}
                 <section className="section section-alt" id="certificates">
@@ -740,9 +769,9 @@ export default function Portfolio() {
                             {[
                                 { img: '/figures/toeic.jpg', icon: 'fas fa-language', date: 'Apr. 2026', title: 'TOEIC Listening & Reading: 720', issuer: 'ETS' },
                                 { img: '/figures/DeepLearning-NVIDIA.jpg', icon: 'fas fa-microchip', date: 'Aug. 2025', title: 'Fundamentals of Deep Learning', issuer: 'NVIDIA' },
+                                { img: '/figures/Applications of Algorithm.jpg', icon: 'fas fa-calculator', date: 'Aug. 2025', title: 'Application of Algorithm', issuer: 'SAMSUNG x PTIT' },
                                 { img: '/figures/AI_ML_Fundamentals.png', icon: 'fas fa-brain', date: 'Apr. 2025', title: 'AI/ML Fundamentals', issuer: 'PTIT x LA TROBE UNIVERSITY' },
                                 { img: '/figures/math.jpg', icon: 'fas fa-calculator', date: 'Apr. 2025', title: 'Participant in National Student Mathematical Olympiad', issuer: 'Vietnam Mathematical Society' },
-                                { img: '/figures/Applications of Algorithm.jpg', icon: 'fas fa-calculator', date: 'Aug. 2025', title: 'Application of Algorithm', issuer: 'SAMSUNG x PTIT' },
                                 { img: '/figures/chemistry.jpg', icon: 'fas fa-calculator', date: 'Mar. 2023', title: 'Third Prize in Provincial Chemistry Olympiad', issuer: 'Bac Ninh Department of Education and Training' },
                                 { img: '/figures/khoahockythua.jpg', icon: 'fas fa-calculator', date: 'Feb. 2023', title: 'Fourth Prize in Provincial Science and Engineering Fair', issuer: 'Bac Ninh Department of Education and Training' },
                             ].map((cert) => (
@@ -777,31 +806,50 @@ export default function Portfolio() {
                         </div>
                         <div className="skills-grid">
                             {[
-                                { icon: 'fas fa-code', title: 'Language & Framework', items: [{ icon: 'fab fa-python', name: 'Python' }, { icon: 'fas fa-copyright', name: 'C / C++' }, { icon: 'fas fa-fire', name: 'PyTorch' }, { icon: 'fas fa-eye', name: 'OpenCV' }, { icon: 'fas fa-chart-line', name: 'Scikit-learn' }, { icon: 'fas fa-table', name: 'Pandas' }] },
                                 {
-                                    icon: 'fas fa-brain', title: 'CV, NLP & GenAI', items: [
-                                        { icon: 'fas fa-database', name: 'RAG (FAISS, BM25)' },
-                                        { icon: 'fas fa-sliders', name: 'Fine-tuning (LoRA/QLoRA)' },
-                                        { icon: 'fas fa-closed-captioning', name: 'Image Captioning (ResNet50, LSTM)' },
-                                        { icon: 'fas fa-vector-square', name: 'Object Detection (YOLO)' }
+                                    icon: 'fas fa-code',
+                                    title: 'Languages & Core Libraries',
+                                    items: [
+                                        { icon: 'fab fa-python', name: 'Python' },
+                                        { icon: 'fas fa-copyright', name: 'C / C++' },
+                                        { icon: 'fab fa-js', name: 'TypeScript / JavaScript' },
+                                        { icon: 'fas fa-fire', name: 'PyTorch' },
+                                        { icon: 'fas fa-chart-line', name: 'Scikit-learn' },
+                                        { icon: 'fas fa-table', name: 'Pandas / NumPy' }
                                     ]
                                 },
                                 {
-                                    icon: 'fas fa-server', title: 'Backend, Database & Infrastructure', items: [
+                                    icon: 'fas fa-brain',
+                                    title: 'AI, Agents & GenAI',
+                                    items: [
+                                        { icon: 'fas fa-robot', name: 'AI Agents (LangGraph, FastMCP)' },
+                                        { icon: 'fas fa-database', name: 'Advanced RAG (FAISS, BM25, Hybrid)' },
+                                        { icon: 'fas fa-sliders', name: 'Fine-tuning (LoRA / QLoRA)' },
+                                        { icon: 'fas fa-eye', name: 'Computer Vision (OpenCV, YOLO, rPPG)' },
+                                        { icon: 'fas fa-microchip', name: 'ONNX Runtime & Inference' }
+                                    ]
+                                },
+                                {
+                                    icon: 'fas fa-server',
+                                    title: 'Backend, Database',
+                                    items: [
                                         { icon: 'fas fa-bolt', name: 'FastAPI' },
-                                        { icon: 'fas fa-database', name: 'PostgreSQL' },
-                                        { icon: 'fas fa-leaf', name: 'Supabase' },
-                                        { icon: 'fab fa-docker', name: 'Docker' },
-                                        { icon: 'fab fa-vercel', name: 'Vercel' },
-                                        { icon: 'fab fa-microsoft', name: 'Azure' }
+                                        { icon: 'fab fa-react', name: 'Next.js / React' },
+                                        { icon: 'fas fa-database', name: 'PostgreSQL & Supabase' },
+                                        { icon: 'fas fa-network-wired', name: 'WebSocket & Redis / Celery' },
+                                        { icon: 'fab fa-docker', name: 'Docker & Azure Cloud' },
+                                        { icon: 'fab fa-vercel', name: 'Vercel' }
                                     ]
                                 },
                                 {
-                                    icon: 'fas fa-wrench', title: 'Tools & AI Tools', items: [
-                                        { icon: 'fab fa-git-alt', name: 'Git/GitHub' },
-                                        { icon: 'fas fa-flask', name: 'Google Colab/Kaggle' },
+                                    icon: 'fas fa-wrench',
+                                    title: 'Tools, Platforms & AI Assistants',
+                                    items: [
+                                        { icon: 'fab fa-git-alt', name: 'Git / GitHub' },
+                                        { icon: 'fas fa-flask', name: 'Google Colab / Kaggle' },
                                         { icon: 'fas fa-face-smile', name: 'Hugging Face' },
-                                        { icon: 'fas fa-wand-magic-sparkles', name: 'Claude Code, Codex' }
+                                        { icon: 'fas fa-chart-pie', name: 'LangSmith & Observability' },
+                                        { icon: 'fas fa-wand-magic-sparkles', name: 'AI Tools (Claude Code, Codex, Gemini)' }
                                     ]
                                 },
                             ].map((category) => (
