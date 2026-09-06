@@ -3,6 +3,8 @@ import './Portfolio.css';
 
 export default function Portfolio() {
     const [activeTab, setActiveTab] = useState('tab-rppg');
+    const [activeProject, setActiveProject] = useState('rppg');
+    const [activeVdaTab, setActiveVdaTab] = useState('tab-vda-overview');
 
     // Setup GPA gradient SVG
     const svgRef = useRef(null);
@@ -178,7 +180,47 @@ export default function Portfolio() {
                         <div className="section-header">
                             <span className="section-tag"><i className="fas fa-rocket"></i> Projects</span>
                         </div>
-                        <div className="project-showcase">
+
+                        {/* Project Switcher */}
+                        <div className="project-switcher">
+                            <button
+                                id="btn-project-rppg"
+                                className={`project-switch-btn ${activeProject === 'rppg' ? 'active' : ''}`}
+                                onClick={() => setActiveProject('rppg')}
+                            >
+                                <div className="psb-icon"><i className="fas fa-heartbeat"></i></div>
+                                <div className="psb-content">
+                                    <span className="psb-label">Project 1</span>
+                                    <span className="psb-title">Non-Invasive Health Analysis</span>
+                                    <span className="psb-tags">
+                                        <span>Computer Vision</span>
+                                        <span>RAG</span>
+                                        <span>WebSocket</span>
+                                    </span>
+                                </div>
+                                <i className="fas fa-chevron-right psb-arrow"></i>
+                            </button>
+                            <button
+                                id="btn-project-vda"
+                                className={`project-switch-btn ${activeProject === 'vda' ? 'active' : ''}`}
+                                onClick={() => setActiveProject('vda')}
+                            >
+                                <div className="psb-icon psb-icon-vda"><i className="fas fa-diagram-project"></i></div>
+                                <div className="psb-content">
+                                    <span className="psb-label">Project 2</span>
+                                    <span className="psb-title">VDaAgent — Data Profiling</span>
+                                    <span className="psb-tags">
+                                        <span>LangGraph</span>
+                                        <span>FastAPI</span>
+                                        <span>Next.js</span>
+                                    </span>
+                                </div>
+                                <i className="fas fa-chevron-right psb-arrow"></i>
+                            </button>
+                        </div>
+
+                        {/* ── PROJECT 1: Non-Invasive ── */}
+                        <div className={`project-showcase ${activeProject === 'rppg' ? 'project-visible' : 'project-hidden'}`}>
                             {/* Project Hero Card */}
                             <div className="project-card featured">
                                 <div className="project-card-glow"></div>
@@ -197,14 +239,14 @@ export default function Portfolio() {
                                 <p className="project-date"><i className="far fa-calendar-alt"></i> first commit on Nov 11, 2025</p>
                                 <p className="project-description">
                                     A platform for measuring health indicators such as: Heart Rate (HR), Heart Rate Variability (HRV), and BVP signals,
-                                    providing vital information about the autonomic nervous system's state, stress resilience,
+                                    providing vital information about the autonomic nervous system&apos;s state, stress resilience,
                                     and cardiovascular disease risk from facial videos. Features real-time webcam analysis via WebSocket, offline video processing
                                     with asynchronous task queues, and an AI medical chatbot using advanced RAG.
                                 </p>
                                 <div className="project-demo-image">
                                     <img src="/figures/project_demo.png" alt="Non-Invasive Health Analysis System — Live measurement interface" loading="lazy" />
                                     <div className="demo-caption">
-                                        <i className="fas fa-camera"></i> Live analysis interface — HR, Blink Rate, SNR & real-time BVP waveform
+                                        <i className="fas fa-camera"></i> Live analysis interface — HR, Blink Rate, SNR &amp; real-time BVP waveform
                                     </div>
                                 </div>
                             </div>
@@ -244,7 +286,7 @@ export default function Portfolio() {
                                         {/* rPPG Engine */}
                                         <div className={`tab-panel ${activeTab === 'tab-rppg' ? 'active' : ''}`}>
                                             <div className="tab-panel-header">
-                                                <h4>Computer Vision & Signal Processing</h4>
+                                                <h4>Computer Vision &amp; Signal Processing</h4>
                                                 <span className="tab-badge">Computer Vision</span>
                                             </div>
                                             <ul className="detail-list">
@@ -331,7 +373,7 @@ export default function Portfolio() {
                                                 <span className="tab-badge">Web UI</span>
                                             </div>
                                             <ul className="detail-list">
-                                                <li><i className="fas fa-check-circle"></i><span><strong>3 trang chính</strong>: Trang chủ, Trực tiếp (webcam + dấu sống), Upload (video bất đồng bộ + lịch sử).</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>3 main pages</strong>: Home, Live (webcam + vitals), Upload (async video + history).</span></li>
                                                 <li><i className="fas fa-check-circle"></i><span>Live page: webcam stream with <strong>face bounding box overlay</strong>, real-time Vitals Cards.</span></li>
                                                 <li><i className="fas fa-check-circle"></i><span><strong>Floating AI chatbot widget</strong> accessible from any page.</span></li>
                                                 <li><i className="fas fa-check-circle"></i><span>State management via <strong>Zustand</strong>, CSS Modules for scoped styling.</span></li>
@@ -348,7 +390,7 @@ export default function Portfolio() {
                                 <p className="project-card-desc">Evaluated on 10 subjects under 3 real-world conditions. The system achieves high accuracy (error &lt; 2 bpm) even under motion or talking conditions.</p>
                                 <div className="benchmark-image">
                                     <img src="/figures/benchmark_normal.png" alt="Benchmark Results — Normal (resting)" loading="lazy" />
-                                    <div className="demo-caption"><i className="fas fa-flask"></i> HR Measurement Benchmark — Normal (resting), mô hình: FactorizePhys</div>
+                                    <div className="demo-caption"><i className="fas fa-flask"></i> HR Measurement Benchmark — Normal (resting), model: FactorizePhys</div>
                                 </div>
                             </div>
 
@@ -375,6 +417,184 @@ export default function Portfolio() {
                                 </div>
                             </div>
                         </div>
+
+                        {/* ── PROJECT 2: VDaAgent ── */}
+                        <div className={`project-showcase ${activeProject === 'vda' ? 'project-visible' : 'project-hidden'}`}>
+                            {/* VDaAgent Hero Card */}
+                            <div className="project-card featured vda-featured">
+                                <div className="project-card-glow vda-glow"></div>
+                                <div className="project-header">
+                                    <div className="project-icon project-icon-vda"><i className="fas fa-diagram-project"></i></div>
+                                    <div className="project-links">
+                                        <span className="project-wip-badge"><i className="fas fa-hard-hat"></i> In Development</span>
+                                    </div>
+                                </div>
+                                <h3 className="project-title">VDaAgent — Evidence-First Data Profiling Workspace</h3>
+                                <p className="project-date"><i className="far fa-calendar-alt"></i> Started Jul 2026 · Active development</p>
+                                <p className="project-description">
+                                    An evidence-first workspace for data profiling and visual analytics. The core unit is a <strong>Profile Run</strong> — deterministic profiling of CSV, TSV, Parquet, JSON, MySQL, MongoDB, and DuckDB sources — followed by AI-powered chart planning, Q&amp;A, drift comparison, and immutable report snapshots. Built with a multi-service architecture on Azure.
+                                </p>
+                                {/* User flow */}
+                                <div className="vda-flow">
+                                    {[
+                                        { icon: 'fas fa-sign-in-alt', label: 'Login' },
+                                        { icon: 'fas fa-upload', label: 'Upload Dataset' },
+                                        { icon: 'fas fa-cogs', label: 'Profile Run' },
+                                        { icon: 'fas fa-user-check', label: 'HITL Review' },
+                                        { icon: 'fas fa-chart-bar', label: 'Charts / Q&A' },
+                                        { icon: 'fas fa-file-pdf', label: 'Report PDF' },
+                                    ].map((step, i, arr) => (
+                                        <div className="vda-flow-item" key={step.label}>
+                                            <div className="vda-flow-step">
+                                                <i className={step.icon}></i>
+                                                <span>{step.label}</span>
+                                            </div>
+                                            {i < arr.length - 1 && <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* VDaAgent Tabs */}
+                            <div className="project-card">
+                                <h3 className="project-card-subtitle"><i className="fas fa-layer-group"></i> Project Details</h3>
+                                <div className="feature-tabs">
+                                    <div className="tab-buttons">
+                                        {[
+                                            { id: 'tab-vda-overview', icon: 'fas fa-boxes', label: 'Overview' },
+                                            { id: 'tab-vda-arch', icon: 'fas fa-sitemap', label: 'Architecture' },
+                                            { id: 'tab-vda-profiling', icon: 'fas fa-microscope', label: 'Profiling' },
+                                            { id: 'tab-vda-agent', icon: 'fas fa-robot', label: 'Agent & Charts' },
+                                            { id: 'tab-vda-reports', icon: 'fas fa-file-alt', label: 'Reports' },
+                                        ].map((tab) => (
+                                            <button
+                                                key={tab.id}
+                                                className={`tab-btn ${activeVdaTab === tab.id ? 'active' : ''}`}
+                                                onClick={() => setActiveVdaTab(tab.id)}
+                                            >
+                                                <i className={tab.icon}></i>
+                                                <span>{tab.label}</span>
+                                            </button>
+                                        ))}
+                                    </div>
+                                    <div className="tab-panels">
+                                        {/* Overview */}
+                                        <div className={`tab-panel ${activeVdaTab === 'tab-vda-overview' ? 'active' : ''}`}>
+                                            <div className="tab-panel-header">
+                                                <h4>Product Overview</h4>
+                                                <span className="tab-badge vda-badge">Full-Stack Platform</span>
+                                            </div>
+                                            <ul className="detail-list">
+                                                <li><i className="fas fa-check-circle"></i><span>Accepts <strong>CSV, TSV, Parquet, JSON</strong> uploads and connects to <strong>MySQL, MongoDB, DuckDB</strong> — all materialized to a secure bounded pipeline.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Deterministic profiling</strong>: schema, quality, statistics, correlation, privacy proposals (PII) per column.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Human-in-the-loop (HITL)</strong> review step: Analyst confirms, edits or rejects semantic type / candidate key / PII proposals before run completes.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Evidence-first</strong> invariant: PII-confirmed columns are excluded from Agent/chart context. No raw rows are returned to the browser or report.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Workspace-scoped roles: <strong>Analyst</strong> for profiling/analytics, <strong>Admin</strong> for user/account management via Supabase Auth.</span></li>
+                                            </ul>
+                                            <div className="tab-metrics">
+                                                <div className="metric-item"><span className="metric-value">28</span><span className="metric-label">Forecast Models</span></div>
+                                                <div className="metric-item"><span className="metric-value">15</span><span className="metric-label">Chart Renderers</span></div>
+                                                <div className="metric-item"><span className="metric-value">3</span><span className="metric-label">Azure App Services</span></div>
+                                                <div className="metric-item"><span className="metric-value">∞</span><span className="metric-label">Profile Runs</span></div>
+                                            </div>
+                                        </div>
+
+                                        {/* Architecture */}
+                                        <div className={`tab-panel ${activeVdaTab === 'tab-vda-arch' ? 'active' : ''}`}>
+                                            <div className="tab-panel-header">
+                                                <h4>Multi-Service Architecture</h4>
+                                                <span className="tab-badge vda-badge">Azure Deployed</span>
+                                            </div>
+                                            <ul className="detail-list">
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Next.js 15 / React 19</strong> frontend — SSR, Supabase PKCE auth, React Query, SSE consumer and server-side PDF route.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>FastAPI</strong> backend — REST/SSE, Bearer + X-Workspace-Id guard, workspace bootstrap, audit and all business workflows.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Dedicated profiling worker</strong> — claims durable jobs via <code>SKIP LOCKED</code>, heartbeat lease renewal, LangGraph HITL resume.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>PostgreSQL / Supabase</strong> for all metadata, audit, LangGraph checkpoints, evidence and trace — never raw rows.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>CI/CD via <strong>GitHub Actions</strong>: Ruff, pytest, Playwright E2E, Vitest, typecheck → build/push images → Alembic migrate → restart 3 App Services → health check.</span></li>
+                                            </ul>
+                                            <div className="flow-diagram">
+                                                <div className="flow-step"><i className="fas fa-globe"></i><span>Next.js</span></div>
+                                                <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
+                                                <div className="flow-step"><i className="fas fa-bolt"></i><span>FastAPI</span></div>
+                                                <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
+                                                <div className="flow-step"><i className="fas fa-cog"></i><span>Worker</span></div>
+                                                <div className="flow-arrow"><i className="fas fa-arrow-right"></i></div>
+                                                <div className="flow-step"><i className="fas fa-database"></i><span>PostgreSQL</span></div>
+                                            </div>
+                                        </div>
+
+                                        {/* Profiling */}
+                                        <div className={`tab-panel ${activeVdaTab === 'tab-vda-profiling' ? 'active' : ''}`}>
+                                            <div className="tab-panel-header">
+                                                <h4>Deterministic Profiling Engine</h4>
+                                                <span className="tab-badge vda-badge">DuckDB + pandas</span>
+                                            </div>
+                                            <ul className="detail-list">
+                                                <li><i className="fas fa-check-circle"></i><span><code>POST /profile</code> returns <strong>202 Accepted</strong>; client polls <code>GET /profiling-jobs/{'{jobId}'}</code> for status transitions: <em>queued → running → succeeded</em>.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Worker uses <code>SKIP LOCKED</code> for atomic job claim, bounded concurrency and finite retry with lease heartbeat.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Profiling graph (LangGraph) saves: row/column counts, column statistics, correlation, quality flags, PII proposals and provenance.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>External datasources (MySQL, MongoDB, DuckDB) are validated, credentials <strong>Fernet-encrypted</strong> at rest, then materialized to a temp file — max 1,000,000 rows.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Analyst HITL review: <code>PATCH /profile/{'{runId}'}/confirm</code> persists decisions and enqueues continuation for the worker to resume the LangGraph checkpoint.</span></li>
+                                            </ul>
+                                        </div>
+
+                                        {/* Agent & Charts */}
+                                        <div className={`tab-panel ${activeVdaTab === 'tab-vda-agent' ? 'active' : ''}`}>
+                                            <div className="tab-panel-header">
+                                                <h4>AI Agent, Charts &amp; Forecast</h4>
+                                                <span className="tab-badge vda-badge">LangGraph + LLM</span>
+                                            </div>
+                                            <ul className="detail-list">
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Chart planner</strong> converts natural-language questions into a validated <code>QuerySpec</code> (allow-listed columns, analysis kind, aggregation, time grain). Deterministic fallback when LLM unavailable.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Analysis kinds: <strong>aggregate, histogram, scatter, box, heatmap, forecast, missing, correlation, cardinality, violin, donut, outlier</strong> — 15 native renderers.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>28 forecast model adapters</strong>: baseline, exponential smoothing, ARIMA, state-space, decomposable and ML. Hidden when dependency or data contract missing.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Q&amp;A Agent (<code>POST /qa/stream</code>) is evidence-scoped to the selected Profile Run; bounded short-term memory (8 messages, per-message truncation).</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>MCP stdio server</strong> (FastMCP) for trusted local processes — bounded profile/chart tools only, no raw-row or SQL execution paths.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Google Calendar integration</strong>: OAuth per workspace/user, list/create/delete events via UI, API and MCP.</span></li>
+                                            </ul>
+                                        </div>
+
+                                        {/* Reports */}
+                                        <div className={`tab-panel ${activeVdaTab === 'tab-vda-reports' ? 'active' : ''}`}>
+                                            <div className="tab-panel-header">
+                                                <h4>Immutable Report Snapshots &amp; Export</h4>
+                                                <span className="tab-badge vda-badge">PDF / JSON</span>
+                                            </div>
+                                            <ul className="detail-list">
+                                                <li><i className="fas fa-check-circle"></i><span>Report Draft is tied to a single Profile Run. Charts pinned to Draft must be <strong>Official evidence</strong> (promoted from Preview with result hash and provenance).</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span><strong>Snapshot</strong> freezes the Draft immutably. Submit → Review → Publish → Archive lifecycle then operates on the frozen snapshot, not live UI state.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>PDF rendered server-side by Next.js route using <strong>Playwright Core + Chromium</strong> after FastAPI authorizes the export source.</span></li>
+                                                <li><i className="fas fa-check-circle"></i><span>Drift comparison: <code>POST /profile/{'{runId}'}/drift</code> between two completed Profile Runs to detect schema/distribution shift.</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* VDaAgent Tech Stack */}
+                            <div className="project-card">
+                                <h3 className="project-card-subtitle"><i className="fas fa-cubes"></i> Tech Stack</h3>
+                                <div className="project-tech-grid">
+                                    {[
+                                        { label: 'Frontend', items: ['Next.js 15', 'React 19', 'React Query', 'TypeScript'] },
+                                        { label: 'Backend', items: ['FastAPI', 'LangGraph', 'Pydantic', 'Alembic'] },
+                                        { label: 'AI / Agent', items: ['LangGraph', 'LLM (pluggable)', 'FastMCP', 'LangSmith'] },
+                                        { label: 'Compute', items: ['DuckDB', 'pandas', 'NumPy', 'SciPy', '28 Forecast Models'] },
+                                        { label: 'Infrastructure', items: ['Azure App Service', 'PostgreSQL / Supabase', 'Supabase Auth', 'GitHub Actions', 'Docker'] },
+                                    ].map((group) => (
+                                        <div className="tech-group" key={group.label}>
+                                            <span className="tech-group-label">{group.label}</span>
+                                            <div className="tech-group-items">
+                                                {group.items.map((item) => (
+                                                    <span className="tech-tag vda-tag" key={item}>{item}</span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
 
@@ -391,8 +611,8 @@ export default function Portfolio() {
                                 <span className="experience-role">Trainee, Onsite, Jul 2026 - Present</span>
                                 <ul className="experience-list">
                                     <li><i className="fas fa-chevron-right"></i><span>Practical training following the SFIA competency framework</span></li>
-                                    <li><i className="fas fa-chevron-right"></i><span>3 weeks of intensive study on AI skills and problem solving</span></li>
-                                    <li><i className="fas fa-chevron-right"></i><span>9 weeks of hands-on AI project execution with mentors and enterprise partners (VSF)</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>3 weeks of intensive study on AI skills and problem solving, 9 weeks of hands-on AI project execution with mentors and enterprise partners</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>Top 2 mini-hackathon across the entire cohort 3 & 4</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -400,11 +620,78 @@ export default function Portfolio() {
                             <div className="experience-icon-wrapper"><i className="fas fa-cube"></i></div>
                             <div className="experience-content">
                                 <h3>Phenikaa-X Joint Stock Company</h3>
-                                <span className="experience-role">Collaborator - Annotator, Remote, Jun 2026 - Present</span>
+                                <span className="experience-role">Collaborator - Annotator, Remote, Jun 2025 - Aug 2026</span>
                                 <ul className="experience-list">
                                     <li><i className="fas fa-chevron-right"></i><span>Utilized OpenVPN and Xpra for remote work with 3D point cloud data from LiDAR sensors</span></li>
                                     <li><i className="fas fa-chevron-right"></i><span>Annotated and refined object point clouds to ensure training data quality</span></li>
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Research Section */}
+                <section className="section" id="research">
+                    <div className="container">
+                        <div className="section-header">
+                            <span className="section-tag"><i className="fas fa-flask"></i> Research</span>
+                        </div>
+
+                        {/* Research Item 1 (Mock Data) */}
+                        <div className="experience-card research-card">
+                            <div className="experience-icon-wrapper research-icon-wrapper">
+                                <i className="fas fa-brain"></i>
+                            </div>
+                            <div className="experience-content">
+                                <div className="research-title-row">
+                                    <h3>Title of Research Project / Publication #1</h3>
+                                    <span className="research-status">Under Review</span>
+                                </div>
+                                <span className="experience-role">Authors: Nguyen Minh Hieu, Co-author Name, Mentor Name</span>
+                                <p className="research-venue">
+                                    <i className="fas fa-book-open"></i> Target: Conference / Journal (e.g. CVPR / NeurIPS / IEEE Access 2026)
+                                </p>
+                                <ul className="experience-list">
+                                    <li><i className="fas fa-chevron-right"></i><span>Proposed a novel deep learning approach for [brief topic description].</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>Conducted extensive experiments demonstrating superior performance over baseline benchmarks.</span></li>
+                                </ul>
+                                <div className="research-links">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" className="research-link-btn">
+                                        <i className="fas fa-file-pdf"></i> Paper PDF
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" className="research-link-btn">
+                                        <i className="fab fa-github"></i> Source Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Research Item 2 (Mock Data) */}
+                        <div className="experience-card research-card">
+                            <div className="experience-icon-wrapper research-icon-wrapper">
+                                <i className="fas fa-atom"></i>
+                            </div>
+                            <div className="experience-content">
+                                <div className="research-title-row">
+                                    <h3>Title of Research Project / Publication #2</h3>
+                                    <span className="research-status completed">Preprint / Completed</span>
+                                </div>
+                                <span className="experience-role">Authors: Nguyen Minh Hieu, Advisor Name</span>
+                                <p className="research-venue">
+                                    <i className="fas fa-book-open"></i> Published on arXiv / Lab Technical Report
+                                </p>
+                                <ul className="experience-list">
+                                    <li><i className="fas fa-chevron-right"></i><span>Investigated [research problem] to solve key challenges in [domain/field].</span></li>
+                                    <li><i className="fas fa-chevron-right"></i><span>Engineered an end-to-end framework optimizing processing time and accuracy.</span></li>
+                                </ul>
+                                <div className="research-links">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" className="research-link-btn">
+                                        <i className="fas fa-file-pdf"></i> Paper PDF
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" className="research-link-btn">
+                                        <i className="fab fa-github"></i> Source Code
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -430,6 +717,14 @@ export default function Portfolio() {
                             <div className="experience-icon-wrapper"><i className="fas fa-trophy"></i></div>
                             <div className="experience-content">
                                 <h3>Participated in the ICPC PTIT 2025 Finals</h3>
+                            </div>
+                        </div>
+
+                        {/* Activity 2: Olympic AI Finals */}
+                        <div className="experience-card">
+                            <div className="experience-icon-wrapper"><i className="fas fa-robot"></i></div>
+                            <div className="experience-content">
+                                <h3>Participated in the Olympic AI PTIT 2025 Finals</h3>
                             </div>
                         </div>
                     </div>
@@ -495,18 +790,18 @@ export default function Portfolio() {
                                     icon: 'fas fa-server', title: 'Backend, Database & Infrastructure', items: [
                                         { icon: 'fas fa-bolt', name: 'FastAPI' },
                                         { icon: 'fas fa-database', name: 'PostgreSQL' },
-                                        { icon: 'fas fa-leaf', name: 'MongoDB' },
+                                        { icon: 'fas fa-leaf', name: 'Supabase' },
                                         { icon: 'fab fa-docker', name: 'Docker' },
-                                        { icon: 'fab fa-vercel', name: 'Vercel' }
+                                        { icon: 'fab fa-vercel', name: 'Vercel' },
+                                        { icon: 'fab fa-microsoft', name: 'Azure' }
                                     ]
                                 },
                                 {
                                     icon: 'fas fa-wrench', title: 'Tools & AI Tools', items: [
                                         { icon: 'fab fa-git-alt', name: 'Git/GitHub' },
-                                        { icon: 'fas fa-flask', name: 'Google Colab' },
-                                        { icon: 'fab fa-kaggle', name: 'Kaggle' },
+                                        { icon: 'fas fa-flask', name: 'Google Colab/Kaggle' },
                                         { icon: 'fas fa-face-smile', name: 'Hugging Face' },
-                                        { icon: 'fas fa-wand-magic-sparkles', name: 'Claude Code, Gemini, Cursor, Codex, Github Copilot' }
+                                        { icon: 'fas fa-wand-magic-sparkles', name: 'Claude Code, Codex' }
                                     ]
                                 },
                             ].map((category) => (

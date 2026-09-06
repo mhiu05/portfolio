@@ -15,7 +15,7 @@ export default function Navbar() {
     }, []);
 
     useEffect(() => {
-        const sections = ['about', 'education', 'projects', 'experience', 'activities', 'certificates', 'skills'];
+        const sections = ['about', 'education', 'projects', 'experience', 'research', 'activities', 'certificates', 'skills'];
 
         const handleScroll = () => {
             sections.forEach((sectionId) => {
@@ -54,6 +54,7 @@ export default function Navbar() {
                     <a href="#education" className={`nav-link ${activeSection === 'education' ? 'active' : ''}`} onClick={closeMenu}>Education</a>
                     <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`} onClick={closeMenu}>Projects</a>
                     <a href="#experience" className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`} onClick={closeMenu}>Experience</a>
+                    <a href="#research" className={`nav-link ${activeSection === 'research' ? 'active' : ''}`} onClick={closeMenu}>Research</a>
                     <a href="#activities" className={`nav-link ${activeSection === 'activities' ? 'active' : ''}`} onClick={closeMenu}>Activities</a>
                     <a href="#certificates" className={`nav-link ${activeSection === 'certificates' ? 'active' : ''}`} onClick={closeMenu}>Certificates</a>
                     <a href="#skills" className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`} onClick={closeMenu}>Skills</a>
