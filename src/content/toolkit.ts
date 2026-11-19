@@ -1,0 +1,61 @@
+import type { ToolkitCategory } from "../types/portfolio";
+export const toolkit: ToolkitCategory[] = [
+  {
+    id: "ai-agent",
+    title: "AI Agent Engineering",
+    tools: [
+      { name: "Python", projectSlugs: ["safevoice", "vdaagent", "non-invasive"] },
+      { name: "PyTorch" },
+      { name: "OpenAI Agents SDK", projectSlugs: ["safevoice"] },
+      { name: "LLM APIs", projectSlugs: ["vdaagent"] },
+      { name: "Agent Orchestration", projectSlugs: ["vdaagent"] },
+      { name: "Multi-Agent Systems", projectSlugs: ["vdaagent"] },
+      { name: "Tool Calling", projectSlugs: ["vdaagent"] },
+      { name: "RAG", projectSlugs: ["non-invasive"] },
+      { name: "Memory & Context", projectSlugs: ["vdaagent"] },
+      { name: "Observability & Tracing", projectSlugs: ["vdaagent"] },
+      { name: "LangSmith" },
+      { name: "Agent Evaluation" },
+    ],
+  },
+  {
+    id: "web",
+    title: "Web Engineering",
+    tools: [
+      { name: "FastAPI", projectSlugs: ["safevoice", "vdaagent", "non-invasive"] },
+      { name: "REST APIs" },
+      { name: "Async Python" },
+      { name: "SSE", projectSlugs: ["vdaagent"] },
+      { name: "React", projectSlugs: ["safevoice", "vdaagent", "non-invasive"] },
+      { name: "TypeScript", projectSlugs: ["safevoice", "vdaagent"] },
+      { name: "Vite" },
+      { name: "Tailwind CSS" },
+    ],
+  },
+  {
+    id: "infra",
+    title: "Infrastructure & DevOps",
+    tools: [
+      { name: "PostgreSQL", projectSlugs: ["vdaagent", "non-invasive"] },
+      { name: "Supabase", projectSlugs: ["safevoice", "non-invasive"] },
+      { name: "Docker", projectSlugs: ["vdaagent", "non-invasive"] },
+      { name: "AWS EC2" },
+      { name: "AWS SES" },
+      { name: "Vercel" },
+      { name: "GitHub Actions" },
+      { name: "CI/CD" },
+    ],
+  },
+  {
+    id: "tools",
+    title: "Developer Tools & Platforms",
+    tools: [
+      { name: "Claude Code / Codex" },
+      { name: "VS Code / Orca" },
+      { name: "Git & GitHub" },
+      { name: "Google Colab / Kaggle" },
+      { name: "Hugging Face" },
+      { name: "Linux" },
+    ],
+  },
+];

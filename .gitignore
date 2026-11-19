@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Production builds and coverage
+/dist/
+/dist-ssr/
+/coverage/
+
+# Test output and browser automation state
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/.playwright-mcp/
+/artifacts/hash-build/
+
+# Tool caches and local session state
+/.vite/
+/.cache/
+/.eslintcache
+*.tsbuildinfo
+/.impeccable/questions/
+/.impeccable/config.local.json
+
+# Environment files; keep shareable examples
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Logs
+*.log
+
+# Operating system and editor temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+*.swp
+*.swo
+*~
+
+artifact/

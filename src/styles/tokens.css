@@ -1,0 +1,32 @@
+:root {
+  --background: #f5f5ef;
+  --surface: #fffef9;
+  --text: #17201c;
+  --secondary: #606c63;
+  --accent: #d8f46c;
+  --accent-soft: #e9efcd;
+  --dark: #14221d;
+  --dark-text: #f1f3e8;
+  --dark-secondary: #a8b9ad;
+  --dark-border: #3c4b42;
+  --border: #d6dcd3;
+  --border-strong: #b6bfb3;
+  --olive: #dce2d3;
+  --muted-surface: #e9ece3;
+  --paper: #fbfcf6;
+  --focus: #4c6814;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --radius: 12px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+}
