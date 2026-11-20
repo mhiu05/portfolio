@@ -25,7 +25,7 @@ Editorial Engineering, warm cream, dark green and lime; supplied typography; int
 
 ## Evidence on Hand
 
-Seven certificate images and three activity images supplied by the owner populate Achievement and Activities. Descriptions, outcomes and dates are transcribed from the supplied documents; the ICPC image identifies 2025 despite its filename. AI in Action is omitted pending an image.
+Eight certificate images and three activity images supplied by the owner populate Achievement and Activities. Descriptions, outcomes and dates are transcribed from the supplied documents; the ICPC image identifies 2025 despite its filename. AI in Action documents completion of Vingroup's applied AI talent program at VinUniversity in August 2026.
 Current profile and contact details live in src/content. SafeVoice has a user-supplied source repository at https://github.com/mhiu05/SafeVoice, repository-based documentation and a frontend demo screenshot with fictional data. Non-Invasive has a user-supplied repository at https://github.com/mhiu05/Non-Invasive, source-based documentation and a repository demo screenshot. VDaAgent has source-based documentation, a frontend mock dashboard screenshot and a GitHub link at https://github.com/mhiu05/VDaAgent. Individual contributions and measured outcomes remain unverified.
 
 ## Product Principles

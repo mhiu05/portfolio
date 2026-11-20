@@ -60,7 +60,7 @@ export const site = {
     output: "Final response",
     resourcesLabel: "Connected resources",
     resources: [
-      { id: "models", title: "Models", detail: "GPT-6, GPT-6.1" },
+      { id: "models", title: "Models", detail: "GPT-6.1, GPT-6.2" },
       {
         id: "tools",
         title: "Tools & APIs",

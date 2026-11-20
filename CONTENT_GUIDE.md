@@ -249,4 +249,4 @@ Chạy `npm.cmd run typecheck`, `npm.cmd run lint`, `npm.cmd test`, `npm.cmd run
 
 Mục Activities nằm giữa Achievement và Toolkit. Sửa `src/content/activities.ts`, mảng `activities`, với các trường `id`, `title`, `description`, `organization`, `date`, `image` và `imageAlt`. Ảnh nằm trong `public/images/activities/`; đường dẫn trong nội dung bắt đầu bằng `/images/activities/`. `date: null` ẩn thời gian khi chưa biết.
 
-Achievement dùng ảnh trong `public/images/certificates/`, khai báo tại `src/content/certifications.ts`. Bấm “View certificate” hoặc ảnh hoạt động để mở ảnh nguyên kích thước. AI in Action chưa có ảnh nên không hiển thị. Chỉ ghi giải thưởng, điểm số và thời gian đọc được từ chứng nhận; không suy ra ngày từ tên tệp khi nội dung ảnh khác.
+Achievement dùng ảnh trong `public/images/certificates/`, khai báo tại `src/content/certifications.ts`. Bấm “View certificate” hoặc ảnh hoạt động để mở ảnh nguyên kích thước. AI in Action dùng tệp `ai-in-action.jpg` với thời gian tháng 8/2026. Chỉ ghi giải thưởng, điểm số và thời gian đọc được từ chứng nhận; không suy ra ngày từ tên tệp khi nội dung ảnh khác.

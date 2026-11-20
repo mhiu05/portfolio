@@ -1,6 +1,18 @@
 import type { Certification } from "../types/portfolio";
 export const certifications: Certification[] = [
   {
+    id: "ai-in-action",
+    title: "AI in Action — Vingroup AI Talent Program",
+    organization: "VinUniversity · Vingroup",
+    category: "Training Program",
+    date: "Aug 2026",
+    description:
+      "Completed Vingroup's 20,000 Applied AI Talents program, progressing from Level 3 to Level 4 in VinUniversity's seven-level AI competency framework. Training covered foundation building, simulated practice and enterprise practice.",
+    image: "/images/certificates/ai-in-action.jpg",
+    verificationUrl: null,
+    status: "Completed",
+  },
+  {
     id: "qualcomm-tech-entrepreneurship",
     title: "Tech Entrepreneurship: From Innovation to Market Success",
     organization: "Qualcomm · L2Pro Vietnam",

@@ -1315,12 +1315,12 @@ footer:focus {
 }
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px 24px;
 }
 .certificate-visual {
   position: relative;
-  height: 255px;
+  height: 200px;
   background: var(--muted-surface);
   border-radius: var(--radius);
   overflow: hidden;
@@ -1329,7 +1329,7 @@ footer:focus {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 20px;
+  padding: 12px;
 }
 .certificate-placeholder {
   display: flex;
@@ -1392,7 +1392,7 @@ footer:focus {
   color: var(--secondary);
 }
 .certificate-info h3 {
-  font-size: 25px;
+  font-size: 20px;
   margin-top: 7px;
 }
 .certificate-info>p {
@@ -1421,8 +1421,8 @@ footer:focus {
 }
 .activities-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 40px 32px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px 24px;
 }
 .activity-entry {
   min-width: 0;
@@ -1431,7 +1431,7 @@ footer:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 200px;
   background: var(--muted-surface);
   border-radius: var(--radius);
   overflow: hidden;
@@ -1451,12 +1451,14 @@ footer:focus {
   color: var(--secondary);
 }
 .activity-entry h3 {
-  font-size: 25px;
+  font-size: 20px;
 }
 .activity-entry p {
   max-width: 65ch;
   margin-top: 12px;
   color: var(--secondary);
+  font-size: 14px;
+  line-height: 1.8;
 }
 .toolkit-groups {
   border-top: 1px solid var(--border);
@@ -1910,6 +1912,10 @@ footer:focus {
   }
 }
 @media (max-width: 1023px) {
+  .certifications-grid,
+  .activities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .container {
     width: calc(100% - 64px);
   }

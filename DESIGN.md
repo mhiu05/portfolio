@@ -33,8 +33,9 @@ Spacing tokens: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px. Desktop content width i
 - About: education, Agent Engineering with tool calling, memory, retrieval and backend integration, and concise workflow.
 - Projects: featured SafeVoice demo screenshot, followed by VDaAgent and Non-Invasive repository screenshots. Arrow previews appear on hover/focus without hiding actions.
 - Work: a true employer timeline, separate from experiments. Dates, images and metadata degrade gracefully; the supplied entry is visibly a placeholder.
-- Achievement: seven supplied certificates with uncropped previews, document-derived descriptions, dates and outcomes. Full-size images open from the certificate action. AI in Action is omitted until an image is available.
-- Activities: a two-column image gallery between Achievement and Toolkit, stacking on mobile. Three supplied activity images have descriptions, organizations and dates supported by their contents or filenames; images open at full size.
+- Achievement: eight supplied certificates with uncropped previews, document-derived descriptions, dates and outcomes, including AI in Action (VinUniversity, August 2026). Full-size images open from the certificate action.
+- Achievement and Activities use four columns on desktop, two on tablet and one on mobile, with uncropped previews and compact titles.
+- Activities: an image gallery between Achievement and Toolkit. Three supplied activity images have descriptions, organizations and dates supported by their contents or filenames; images open at full size.
 - Toolkit: ruled category rows; tools with declared associations link to a project brief. Sample status sits near the heading.
 - Studies: large project header, concept visual, content index, reusable prose/architecture/code/table blocks and next-project navigation.
 - Footer: dark contact statement, only available social links and a back-to-top action.
